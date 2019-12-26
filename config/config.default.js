@@ -17,6 +17,15 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
+  config.security = {
+    //要加上安全的东西
+    csrf: false
+  };
+
+  exports.cors = {
+    origin: "*",
+    allowMethods: "GET,HEAD,PUT,POST,DELETE,PATCH"
+  };
 
   config.mysql = {
     client: {

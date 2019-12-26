@@ -1202,3 +1202,275 @@ name: "ER_NO_SUCH_TABLEError"
 pid: 8349
 hostname: umideMacBook-Air-2.local
 
+2019-12-26 16:51:48,768 WARN 11714 [-/127.0.0.1/-/2ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 16:51:48,773 WARN 11714 [-/127.0.0.1/-/7ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11714
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 16:51:50,484 WARN 11714 [-/127.0.0.1/-/1ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 16:51:50,484 WARN 11714 [-/127.0.0.1/-/1ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11714
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 16:51:59,252 WARN 11714 [-/127.0.0.1/-/1ms POST /login?=2] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 16:51:59,252 WARN 11714 [-/127.0.0.1/-/1ms POST /login?=2] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11714
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 16:52:31,835 WARN 11845 [-/127.0.0.1/-/7ms POST /login?=2] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 16:52:31,838 WARN 11845 [-/127.0.0.1/-/10ms POST /login?=2] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11845
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 16:52:33,345 WARN 11845 [-/127.0.0.1/-/1ms POST /login?=2] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 16:52:33,345 WARN 11845 [-/127.0.0.1/-/1ms POST /login?=2] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11845
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:02:28,983 WARN 11913 [-/127.0.0.1/-/2ms POST /login?=2] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:02:28,986 WARN 11913 [-/127.0.0.1/-/4ms POST /login?=2] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11913
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:02:33,759 WARN 11913 [-/127.0.0.1/-/0ms POST /login?=] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:02:33,759 WARN 11913 [-/127.0.0.1/-/1ms POST /login?=] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11913
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:02:34,813 WARN 11913 [-/127.0.0.1/-/1ms POST /login?=] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:02:34,814 WARN 11913 [-/127.0.0.1/-/1ms POST /login?=] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 11913
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:09:13,123 WARN 12060 [-/127.0.0.1/-/3ms POST /login?=] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:09:13,127 WARN 12060 [-/127.0.0.1/-/7ms POST /login?=] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:09:27,463 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:09:27,463 WARN 12060 [-/127.0.0.1/-/0ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:09:28,421 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:09:28,422 WARN 12060 [-/127.0.0.1/-/0ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:09:29,115 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:09:29,115 WARN 12060 [-/127.0.0.1/-/0ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:09:29,763 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:09:29,764 WARN 12060 [-/127.0.0.1/-/0ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:13:52,998 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:13:52,999 WARN 12060 [-/127.0.0.1/-/0ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:14:38,549 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:14:38,549 WARN 12060 [-/127.0.0.1/-/0ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:14:40,543 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:14:40,544 WARN 12060 [-/127.0.0.1/-/0ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 17:14:48,043 WARN 12060 [-/127.0.0.1/-/0ms POST /login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-12-26 17:14:48,044 WARN 12060 [-/127.0.0.1/-/1ms POST /login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/app/extend/context.js:162:19)
+    at csrf (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/lib/middlewares/csrf.js:33:9)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/umi/git/myblog/vue-blog-api/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/umi/git/myblog/vue-blog-api/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 12060
+hostname: umideMacBook-Air-2.local
+

@@ -1,43 +1,11 @@
 {
   "keys": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
   "middleware": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
-  "mysql": {
-    "client": {
-      "host": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
-      "port": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
-      "user": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
-      "password": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
-      "database": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js"
-    },
-    "app": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
-    "agent": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
-    "default": {
-      "database": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql/config/config.default.js",
-      "connectionLimit": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql/config/config.default.js"
-    }
-  },
-  "session": {
-    "maxAge": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
-    "key": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
-    "httpOnly": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
-    "encrypt": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js"
-  },
   "security": {
+    "csrf": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
     "domainWhiteList": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
     "protocolWhiteList": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
     "defaultMiddleware": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-    "csrf": {
-      "enable": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "type": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "ignoreJSON": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "useSession": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "cookieName": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "sessionName": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "headerName": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "bodyName": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "queryName": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
-      "refererWhiteList": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js"
-    },
     "xframe": {
       "enable": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
       "value": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js"
@@ -75,6 +43,31 @@
       "ipBlackList": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js",
       "checkAddress": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js"
     }
+  },
+  "cors": {
+    "origin": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+    "allowMethods": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js"
+  },
+  "mysql": {
+    "client": {
+      "host": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "port": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "user": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "password": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "database": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js"
+    },
+    "app": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+    "agent": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+    "default": {
+      "database": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql/config/config.default.js"
+    }
+  },
+  "session": {
+    "maxAge": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js"
   },
   "helper": {
     "shtml": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js"
@@ -179,8 +172,12 @@
     },
     "dependencies": {
       "egg": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-mysql": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
-      "egg-scripts": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
+      "egg-scripts": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-redis": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "moment": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
       "autod": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
