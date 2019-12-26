@@ -68,3 +68,17 @@
 2019-12-23 16:42:05,493 INFO 54440 [egg:core] dump config after load, 7ms
 2019-12-23 16:42:05,516 INFO 54440 [egg-watcher:application] watcher start success
 2019-12-23 16:42:05,524 INFO 54440 [egg:core] dump config after ready, 4ms
+2019-12-23 21:37:45,729 INFO 24572 [egg:logger] init all loggers with options: {"dir":"E:\\my-blog\\vue-blog-api\\logs\\blog-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"blog-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-12-23 21:37:45,786 INFO 24572 [egg-multipart] stream mode enable
+2019-12-23 21:37:45,895 INFO 24572 [egg-static] starting static serve /public/ -> E:\my-blog\vue-blog-api\app\public
+2019-12-23 21:37:45,900 INFO 24572 [egg-security] use csrf middleware
+2019-12-23 21:37:45,902 INFO 24572 [egg-security] use methodnoallow middleware
+2019-12-23 21:37:45,903 INFO 24572 [egg-security] use noopen middleware
+2019-12-23 21:37:45,905 INFO 24572 [egg-security] use nosniff middleware
+2019-12-23 21:37:45,906 INFO 24572 [egg-security] use xssProtection middleware
+2019-12-23 21:37:45,906 INFO 24572 [egg-security] use xframe middleware
+2019-12-23 21:37:45,907 INFO 24572 [egg-security] use dta middleware
+2019-12-23 21:37:45,907 INFO 24572 [egg-security] compose 7 middlewares into one security middleware
+2019-12-23 21:37:45,957 INFO 24572 [egg:core] dump config after load, 30ms
+2019-12-23 21:37:45,976 INFO 24572 [egg-watcher:application] watcher start success
+2019-12-23 21:37:46,008 INFO 24572 [egg:core] dump config after ready, 30ms

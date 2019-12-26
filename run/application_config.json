@@ -88,25 +88,25 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-onerror/lib/onerror_page.mustache"
+      "templatePath": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-jsonp/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-onerror/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-i18n/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-watcher/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-schedule/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-development/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-static/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-view/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/locales",
-        "/Users/umi/git/myblog/vue-blog-api/config/locales"
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-jsonp\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-onerror\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-i18n\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-watcher\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-schedule\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-multipart\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-development\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-logrotator\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-static\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-view\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\config\\locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -117,8 +117,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-watcher/lib/event-sources/development"
+        "default": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -141,7 +141,7 @@
       "files": 10,
       "fileExtensions": [],
       "whitelist": null,
-      "tmpdir": "/var/folders/4l/027bzscs06jd8pv5lybryy180000gn/T/egg-multipart-tmp/blog-api",
+      "tmpdir": "C:\\Users\\KK勇杰\\AppData\\Local\\Temp\\egg-multipart-tmp\\blog-api",
       "cleanSchedule": {
         "cron": "0 30 4 * * *"
       }
@@ -164,14 +164,14 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/umi/git/myblog/vue-blog-api/app/public",
+      "dir": "E:\\my-blog\\vue-blog-api\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "/Users/umi/git/myblog/vue-blog-api/app/view",
+      "root": "E:\\my-blog\\vue-blog-api\\app\\view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -233,9 +233,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "/Users/umi/git/myblog/vue-blog-api",
-    "HOME": "/Users/umi",
-    "rundir": "/Users/umi/git/myblog/vue-blog-api/run",
+    "baseDir": "E:\\my-blog\\vue-blog-api",
+    "HOME": "C:\\Users\\KK勇杰",
+    "rundir": "E:\\my-blog\\vue-blog-api\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -267,7 +267,7 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "/Users/umi/git/myblog/vue-blog-api/logs/blog-api",
+      "dir": "E:\\my-blog\\vue-blog-api\\logs\\blog-api",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -360,8 +360,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -373,8 +373,8 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security",
       "version": "2.7.1"
     },
     "jsonp": {
@@ -386,8 +386,8 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-jsonp",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -399,8 +399,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-onerror",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -410,8 +410,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-i18n",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -421,8 +421,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-watcher",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -432,8 +432,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-schedule",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -445,8 +445,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-multipart",
       "version": "2.10.1"
     },
     "development": {
@@ -460,8 +460,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-development",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-development",
       "version": "2.4.3"
     },
     "logrotator": {
@@ -473,8 +473,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -484,8 +484,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-static",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -495,8 +495,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
-      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-view",
+      "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-view",
       "version": "2.1.2"
     }
   }
