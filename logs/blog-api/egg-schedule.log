@@ -1,21 +1,84 @@
-2019-12-23 16:14:24,906 INFO 50232 [Timer] /Users/umi/git/myblog/blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 44135098ms at 2019-12-24 04:30:00.004
-2019-12-23 16:14:24,907 INFO 50232 [Timer] /Users/umi/git/myblog/blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 27935093ms at 2019-12-24 00:00:00.000
-2019-12-23 16:14:24,907 INFO 50232 [Timer] /Users/umi/git/myblog/blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 27936093ms at 2019-12-24 00:00:01.000
-2019-12-23 16:14:24,664 INFO 50240 [egg-schedule]: register schedule /Users/umi/git/myblog/blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
-2019-12-23 16:14:24,664 INFO 50240 [egg-schedule]: register schedule /Users/umi/git/myblog/blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
-2019-12-23 16:14:24,664 INFO 50240 [egg-schedule]: register schedule /Users/umi/git/myblog/blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
-2019-12-23 16:36:26,508 INFO 52467 [egg-schedule]: register schedule /Users/umi/git/myblog/blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
-2019-12-23 16:36:26,508 INFO 52467 [egg-schedule]: register schedule /Users/umi/git/myblog/blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
-2019-12-23 16:36:26,508 INFO 52467 [egg-schedule]: register schedule /Users/umi/git/myblog/blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
-2019-12-23 16:39:27,998 INFO 53156 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
-2019-12-23 16:39:27,998 INFO 53156 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
-2019-12-23 16:39:27,998 INFO 53156 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
-2019-12-23 16:39:28,247 INFO 53152 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 42631758ms at 2019-12-24 04:30:00.005
-2019-12-23 16:39:28,248 INFO 53152 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 26431752ms at 2019-12-24 00:00:00.000
-2019-12-23 16:39:28,248 INFO 53152 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 26432752ms at 2019-12-24 00:00:01.000
-2019-12-23 16:42:01,829 INFO 54422 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
-2019-12-23 16:42:01,829 INFO 54422 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
-2019-12-23 16:42:01,829 INFO 54422 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
-2019-12-23 16:42:05,226 INFO 54440 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
-2019-12-23 16:42:05,227 INFO 54440 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
-2019-12-23 16:42:05,227 INFO 54440 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-25 16:31:52,756 INFO 54685 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-25 16:31:52,756 INFO 54685 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-25 16:31:52,756 INFO 54685 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-25 16:33:02,388 INFO 54816 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-25 16:33:02,388 INFO 54816 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-25 16:33:02,388 INFO 54816 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:10:51,621 INFO 65027 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:10:51,621 INFO 65027 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:10:51,621 INFO 65027 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:12:34,813 INFO 65213 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:12:34,814 INFO 65213 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:12:34,814 INFO 65213 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:12:43,825 INFO 65239 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:12:43,825 INFO 65239 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:12:43,825 INFO 65239 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:17:33,762 INFO 65705 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:17:33,762 INFO 65705 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:17:33,762 INFO 65705 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:19:30,760 INFO 66138 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:19:30,760 INFO 66138 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:19:30,760 INFO 66138 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:27:21,276 INFO 66927 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:27:21,276 INFO 66927 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:27:21,276 INFO 66927 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:32:08,788 INFO 67411 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:32:08,788 INFO 67411 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:32:08,788 INFO 67411 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:32:26,840 INFO 67468 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 64653166ms at 2019-12-27 04:30:00.006
+2019-12-26 10:32:26,841 INFO 67468 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 48453159ms at 2019-12-27 00:00:00.000
+2019-12-26 10:32:26,841 INFO 67468 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 48454159ms at 2019-12-27 00:00:01.000
+2019-12-26 10:32:26,738 INFO 67473 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:32:26,738 INFO 67473 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:32:26,738 INFO 67473 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:32:50,147 INFO 67519 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:32:50,147 INFO 67519 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:32:50,147 INFO 67519 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:56:00,657 INFO 69702 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:56:00,657 INFO 69702 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:56:00,657 INFO 69702 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:57:46,315 INFO 69882 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:57:46,315 INFO 69882 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:57:46,315 INFO 69882 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:59:10,890 INFO 70035 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:59:10,890 INFO 70035 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:59:10,891 INFO 70035 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 10:59:12,568 INFO 70046 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 10:59:12,568 INFO 70046 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 10:59:12,569 INFO 70046 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:01:05,890 INFO 70232 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:01:05,890 INFO 70232 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:01:05,890 INFO 70232 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:01:12,443 INFO 70261 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:01:12,443 INFO 70261 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:01:12,443 INFO 70261 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:03:25,027 INFO 70613 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:03:25,028 INFO 70613 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:03:25,028 INFO 70613 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:06:12,522 INFO 70916 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:06:12,523 INFO 70916 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:06:12,523 INFO 70916 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:09:45,064 INFO 71341 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:09:45,064 INFO 71341 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:09:45,064 INFO 71341 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:13:48,596 INFO 71787 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:13:48,596 INFO 71787 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:13:48,596 INFO 71787 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:20:21,122 INFO 72455 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:20:21,123 INFO 72455 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:20:21,123 INFO 72455 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:20:21,529 INFO 72448 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 61778476ms at 2019-12-27 04:30:00.005
+2019-12-26 11:20:21,529 INFO 72448 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 45578471ms at 2019-12-27 00:00:00.000
+2019-12-26 11:20:21,530 INFO 72448 [Timer] /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 45579471ms at 2019-12-27 00:00:01.001
+2019-12-26 11:23:01,947 INFO 72719 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:23:01,947 INFO 72719 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:23:01,947 INFO 72719 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:24:58,677 INFO 72963 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:24:58,678 INFO 72963 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:24:58,678 INFO 72963 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:25:26,058 INFO 73051 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:25:26,059 INFO 73051 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:25:26,059 INFO 73051 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-12-26 11:27:46,209 INFO 73286 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2019-12-26 11:27:46,209 INFO 73286 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-12-26 11:27:46,209 INFO 73286 [egg-schedule]: register schedule /Users/umi/git/myblog/vue-blog-api/node_modules/egg-logrotator/app/schedule/rotate_by_file.js

@@ -1,6 +1,21 @@
 {
   "keys": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
   "middleware": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+  "mysql": {
+    "client": {
+      "host": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "port": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "user": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "password": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+      "database": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js"
+    },
+    "app": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+    "agent": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+    "default": {
+      "database": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql/config/config.default.js"
+    }
+  },
   "session": {
     "maxAge": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
     "key": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-session/config/config.default.js",
@@ -164,6 +179,7 @@
     },
     "dependencies": {
       "egg": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-scripts": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
@@ -172,6 +188,10 @@
       "egg-bin": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-ci": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-mock": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-redis": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-session-redis": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "eslint": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "eslint-config-egg": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
     },

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
+    "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.11.0"
   },
   "devDependencies": {
@@ -16,6 +17,10 @@
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.11.0",
     "egg-mock": "^3.21.0",
+    "egg-redis": "^2.3.2",
+    "egg-scripts": "^2.11.0",
+    "egg-sequelize": "^5.1.0",
+    "egg-session-redis": "^2.1.0",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0"
   },

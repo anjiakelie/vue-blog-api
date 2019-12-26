@@ -148,6 +148,21 @@
       "defaultViewEngine": "",
       "mapping": {}
     },
+    "mysql": {
+      "default": {
+        "database": null,
+        "connectionLimit": 5
+      },
+      "app": true,
+      "agent": false,
+      "client": {
+        "host": "127.0.0.1",
+        "port": "3306",
+        "user": "root",
+        "password": "<String len: 8>",
+        "database": "my_blogDataBase"
+      }
+    },
     "env": "local",
     "name": "blog-api",
     "keys": "<String len: 27>",
@@ -168,6 +183,7 @@
       },
       "dependencies": {
         "egg": "^2.15.1",
+        "egg-mysql": "^3.0.0",
         "egg-scripts": "^2.11.0"
       },
       "devDependencies": {
@@ -176,6 +192,10 @@
         "egg-bin": "^4.11.0",
         "egg-ci": "^1.11.0",
         "egg-mock": "^3.21.0",
+        "egg-redis": "^2.3.2",
+        "egg-scripts": "^2.11.0",
+        "egg-sequelize": "^5.1.0",
+        "egg-session-redis": "^2.1.0",
         "eslint": "^5.13.0",
         "eslint-config-egg": "^7.1.0"
       },
@@ -452,6 +472,17 @@
       "from": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/plugin.js",
       "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-view",
       "version": "2.1.2"
+    },
+    "mysql": {
+      "enable": true,
+      "package": "egg-mysql",
+      "name": "mysql",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/umi/git/myblog/vue-blog-api/config/plugin.js",
+      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql",
+      "version": "3.0.0"
     }
   }
 }
