@@ -223,3 +223,5 @@
 2019-12-26 18:01:47,333 INFO 13228 [egg-watcher] Start watching: "/Users/umi/git/myblog/vue-blog-api/app.js"
 2019-12-26 18:01:47,334 INFO 13228 [egg-watcher:agent] watcher start success
 2019-12-26 18:01:47,359 INFO 13228 [egg:core] dump config after ready, 4ms
+2019-12-26 18:14:22,167 WARN 13228 [agent:development] reload worker because /Users/umi/git/myblog/vue-blog-api/app/controller/home.js change
+2019-12-26 18:14:21,953 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899679133,"size":491,"blocks":8,"atimeMs":1577355261884.0835,"mtimeMs":1577355261886.2507,"ctimeMs":1577355261886.2507,"birthtimeMs":1577088753049.483,"atime":"2019-12-26T10:14:21.884Z","mtime":"2019-12-26T10:14:21.886Z","ctime":"2019-12-26T10:14:21.886Z","birthtime":"2019-12-23T08:12:33.049Z"},"remove":false,"isDirectory":false,"isFile":true}

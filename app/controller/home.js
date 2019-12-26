@@ -4,13 +4,16 @@ const Controller = require("egg").Controller;
 
 class HomeController extends Controller {
   async login() {
-    const { ctx } = this;
+    const { ctx, app } = this;
     let params = {};
     const { account, password } = ctx.request.body;
     console.log("account-->", account);
     console.log("password-->", password);
 
-    const user = await ctx.app.mysql.query("select * from user");
+    const user = await app.mysql.get("user", {
+      account
+    });
+    console.log("user-->", user);
 
     ctx.body = {
       code: 1
