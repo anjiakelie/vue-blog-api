@@ -24,7 +24,7 @@ module.exports = appInfo => {
       port: "3306",
       user: "root",
       password: "mysqlpwd", //这个密码有点奇葩，连接主机的密码，不是连接数据库的密码
-      database: "my_blogDataBase"
+      database: "my_blog"
     },
     app: true,
     agent: false

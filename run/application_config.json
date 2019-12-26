@@ -190,7 +190,7 @@
         "port": "3306",
         "user": "root",
         "password": "<String len: 8>",
-        "database": "my_blogDataBase"
+        "database": "my_blog"
       }
     },
     "env": "local",
