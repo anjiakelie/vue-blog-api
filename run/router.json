@@ -2,12 +2,11 @@
   {
     "name": null,
     "methods": [
-      "HEAD",
-      "GET"
+      "POST"
     ],
     "paramNames": [],
-    "path": "/",
-    "regexp": "/^(?:\\/(?=$))?$/",
+    "path": "/login",
+    "regexp": "/^\\/login(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

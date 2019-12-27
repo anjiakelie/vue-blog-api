@@ -1,0 +1,1204 @@
+2019-12-26 10:10:52,203 ERROR 65027 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 65027
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:12:44,048 ERROR 65239 [-/127.0.0.1/-/1ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 65239
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:17:34,168 ERROR 65705 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 65705
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:19:30,956 ERROR 66138 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 66138
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:27:21,423 ERROR 66927 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 66927
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:32:08,929 ERROR 67411 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 67411
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:32:50,304 ERROR 67519 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 67519
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:56:01,077 ERROR 69702 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 69702
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:57:46,734 ERROR 69882 [-/127.0.0.1/-/1ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 69882
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:59:11,310 ERROR 70035 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 70035
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 10:59:12,785 ERROR 70046 [-/127.0.0.1/-/1ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'root'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 70046
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:01:06,276 ERROR 70232 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 70232
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:01:12,929 ERROR 70261 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 70261
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:03:25,414 ERROR 70613 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 70613
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:06:12,831 ERROR 70916 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 70916
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:09:45,375 ERROR 71341 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'kkkkk'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 71341
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:13:48,989 ERROR 71787 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'test'@'172.17.0.1' (using password: YES)
+    at Handshake.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Protocol._enqueue (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+code: "ER_ACCESS_DENIED_ERROR"
+errno: 1045
+sqlMessage: "Access denied for user 'test'@'172.17.0.1' (using password: YES)"
+sqlState: "28000"
+fatal: true
+name: "ER_ACCESS_DENIED_ERRORError"
+pid: 71787
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:23:15,442 ERROR 72719 [-/127.0.0.1/-/26ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 72719
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:24:59,197 ERROR 72719 [-/127.0.0.1/-/9ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 72719
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:40:05,514 ERROR 75723 [-/127.0.0.1/-/33ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75723
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:40:15,750 ERROR 75723 [-/127.0.0.1/-/9ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75723
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:40:23,255 ERROR 75763 [-/127.0.0.1/-/18ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75763
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:40:24,194 ERROR 75763 [-/127.0.0.1/-/6ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75763
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:40:24,969 ERROR 75763 [-/127.0.0.1/-/12ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75763
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:40:26,099 ERROR 75763 [-/127.0.0.1/-/8ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75763
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:40:27,084 ERROR 75763 [-/127.0.0.1/-/6ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75763
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:13,472 ERROR 75934 [-/127.0.0.1/-/36ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:14,871 ERROR 75934 [-/127.0.0.1/-/9ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:15,795 ERROR 75934 [-/127.0.0.1/-/10ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:16,548 ERROR 75934 [-/127.0.0.1/-/10ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:17,253 ERROR 75934 [-/127.0.0.1/-/5ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:56,179 ERROR 75934 [-/127.0.0.1/-/32ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:56,953 ERROR 75934 [-/127.0.0.1/-/7ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:57,718 ERROR 75934 [-/127.0.0.1/-/7ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:58,327 ERROR 75934 [-/127.0.0.1/-/16ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:42:58,913 ERROR 75934 [-/127.0.0.1/-/6ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 75934
+hostname: umideMacBook-Air-2.local
+
+2019-12-26 11:51:29,554 ERROR 8349 [-/127.0.0.1/-/15ms GET /] nodejs.ER_NO_SUCH_TABLEError: ER_NO_SUCH_TABLE: Table 'my_blogDataBase.user' doesn't exist
+    at Query.Sequence._packetToError (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    --------------------
+    at Pool.query (/Users/umi/git/myblog/vue-blog-api/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/client.js:34:20)
+    at RDSClient.proto.query (/Users/umi/git/myblog/vue-blog-api/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:65:19)
+    at /Users/umi/git/myblog/vue-blog-api/node_modules/co/index.js:54:5
+    sql: select * from user
+code: "ER_NO_SUCH_TABLE"
+errno: 1146
+sqlMessage: "Table 'my_blogDataBase.user' doesn't exist"
+sqlState: "42S02"
+index: 0
+sql: "select * from user"
+name: "ER_NO_SUCH_TABLEError"
+pid: 8349
+hostname: umideMacBook-Air-2.local
+

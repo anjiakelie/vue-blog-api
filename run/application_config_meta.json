@@ -1,28 +1,11 @@
 {
   "keys": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
   "middleware": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
-  "session": {
-    "maxAge": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js"
-  },
   "security": {
+    "csrf": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
     "domainWhiteList": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
     "protocolWhiteList": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
     "defaultMiddleware": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-    "csrf": {
-      "enable": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "type": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "ignoreJSON": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "useSession": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "cookieName": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "sessionName": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "headerName": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "bodyName": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "queryName": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
-      "refererWhiteList": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js"
-    },
     "xframe": {
       "enable": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
       "value": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js"
@@ -60,6 +43,31 @@
       "ipBlackList": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js",
       "checkAddress": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js"
     }
+  },
+  "cors": {
+    "origin": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
+    "allowMethods": "E:\\my-blog\\vue-blog-api\\config\\config.default.js"
+  },
+  "mysql": {
+    "client": {
+      "host": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
+      "port": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
+      "user": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
+      "password": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
+      "database": "E:\\my-blog\\vue-blog-api\\config\\config.default.js"
+    },
+    "app": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
+    "agent": "E:\\my-blog\\vue-blog-api\\config\\config.default.js",
+    "default": {
+      "database": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-mysql\\config\\config.default.js",
+      "connectionLimit": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-mysql\\config\\config.default.js"
+    }
+  },
+  "session": {
+    "maxAge": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
     "shtml": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-security\\config\\config.default.js"
@@ -164,7 +172,12 @@
     },
     "dependencies": {
       "egg": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
-      "egg-scripts": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js"
+      "egg-cors": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-mysql": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-redis": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-sequelize": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "moment": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
       "autod": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
@@ -172,6 +185,10 @@
       "egg-bin": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-ci": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-mock": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-redis": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-sequelize": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-session-redis": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "eslint": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "eslint-config-egg": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js"
     },

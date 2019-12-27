@@ -16,19 +16,7 @@
       "domainWhiteList": [],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
-      "csrf": {
-        "enable": true,
-        "type": "ctoken",
-        "ignoreJSON": false,
-        "useSession": false,
-        "cookieName": "csrfToken",
-        "sessionName": "csrfToken",
-        "headerName": "x-csrf-token",
-        "bodyName": "_csrf",
-        "queryName": "_csrf",
-        "refererWhiteList": [],
-        "matching": "<Function anonymous>"
-      },
+      "csrf": false,
       "xframe": {
         "enable": true,
         "value": "SAMEORIGIN",
@@ -105,6 +93,8 @@
         "E:\\my-blog\\vue-blog-api\\node_modules\\egg-logrotator\\config\\locales",
         "E:\\my-blog\\vue-blog-api\\node_modules\\egg-static\\config\\locales",
         "E:\\my-blog\\vue-blog-api\\node_modules\\egg-view\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-mysql\\config\\locales",
+        "E:\\my-blog\\vue-blog-api\\node_modules\\egg-cors\\config\\locales",
         "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\locales",
         "E:\\my-blog\\vue-blog-api\\config\\locales"
       ],
@@ -177,6 +167,25 @@
       "defaultViewEngine": "",
       "mapping": {}
     },
+    "mysql": {
+      "default": {
+        "database": null,
+        "connectionLimit": 5
+      },
+      "app": true,
+      "agent": false,
+      "client": {
+        "host": "localhost",
+        "port": "3306",
+        "user": "root",
+        "password": "<String len: 6>",
+        "database": "my_blog"
+      }
+    },
+    "cors": {
+      "origin": "*",
+      "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
+    },
     "env": "local",
     "name": "blog-api",
     "keys": "<String len: 27>",
@@ -197,7 +206,12 @@
       },
       "dependencies": {
         "egg": "^2.15.1",
-        "egg-scripts": "^2.11.0"
+        "egg-cors": "^2.2.3",
+        "egg-mysql": "^3.0.0",
+        "egg-scripts": "^2.11.0",
+        "egg-redis": "^2.3.2",
+        "egg-sequelize": "^5.1.0",
+        "moment": "^2.24.0"
       },
       "devDependencies": {
         "autod": "^3.0.1",
@@ -205,6 +219,10 @@
         "egg-bin": "^4.11.0",
         "egg-ci": "^1.11.0",
         "egg-mock": "^3.21.0",
+        "egg-redis": "^2.3.2",
+        "egg-scripts": "^2.11.0",
+        "egg-sequelize": "^5.1.0",
+        "egg-session-redis": "^2.1.0",
         "eslint": "^5.13.0",
         "eslint-config-egg": "^7.1.0"
       },
@@ -310,6 +328,7 @@
       "logging": false
     },
     "coreMiddleware": [
+      "cors",
       "meta",
       "siteFile",
       "notfound",
@@ -498,6 +517,28 @@
       "from": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\plugin.js",
       "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-view",
       "version": "2.1.2"
+    },
+    "mysql": {
+      "enable": true,
+      "package": "egg-mysql",
+      "name": "mysql",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "E:\\my-blog\\vue-blog-api\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-mysql",
+      "version": "3.0.0"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "E:\\my-blog\\vue-blog-api\\config\\plugin.js",
+      "path": "E:\\my-blog\\vue-blog-api\\node_modules\\egg-cors",
+      "version": "2.2.3"
     }
   }
 }
