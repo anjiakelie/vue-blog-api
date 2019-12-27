@@ -857,3 +857,35 @@
 2019-12-26 18:14:26,108 INFO 13538 [egg-watcher:application] watcher start success
 2019-12-26 18:14:26,116 INFO 13538 [egg-mysql] instance[0] status OK, rds currentTime: Thu Dec 26 2019 10:14:41 GMT+0800 (GMT+08:00)
 2019-12-26 18:14:26,124 INFO 13538 [egg:core] dump config after ready, 4ms
+2019-12-26 18:22:58,250 INFO 13632 [egg:logger] init all loggers with options: {"dir":"/Users/umi/git/myblog/vue-blog-api/logs/blog-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"blog-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-12-26 18:22:58,314 INFO 13632 [egg-multipart] stream mode enable
+2019-12-26 18:22:58,315 INFO 13632 [egg-mysql] connecting root@127.0.0.1:3306/my_blog
+2019-12-26 18:22:58,691 INFO 13632 [egg-static] starting static serve /public/ -> /Users/umi/git/myblog/vue-blog-api/app/public
+2019-12-26 18:22:58,695 INFO 13632 [egg-security] use methodnoallow middleware
+2019-12-26 18:22:58,697 INFO 13632 [egg-security] use noopen middleware
+2019-12-26 18:22:58,700 INFO 13632 [egg-security] use nosniff middleware
+2019-12-26 18:22:58,702 INFO 13632 [egg-security] use xssProtection middleware
+2019-12-26 18:22:58,704 INFO 13632 [egg-security] use xframe middleware
+2019-12-26 18:22:58,706 INFO 13632 [egg-security] use dta middleware
+2019-12-26 18:22:58,706 INFO 13632 [egg-security] compose 6 middlewares into one security middleware
+2019-12-26 18:22:58,723 INFO 13632 [egg:core] dump config after load, 8ms
+2019-12-26 18:22:58,756 INFO 13632 [egg-watcher:application] watcher start success
+2019-12-26 18:22:58,765 INFO 13632 [egg-mysql] instance[0] status OK, rds currentTime: Thu Dec 26 2019 10:23:14 GMT+0800 (GMT+08:00)
+2019-12-26 18:22:58,774 INFO 13632 [egg:core] dump config after ready, 6ms
+2019-12-27 08:45:03,072 WARN 13632 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-12-27 09:32:31,220 WARN 13632 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-12-27 10:59:55,877 INFO 13913 [egg:logger] init all loggers with options: {"dir":"/Users/umi/git/myblog/vue-blog-api/logs/blog-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"blog-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-12-27 10:59:55,926 INFO 13913 [egg-multipart] stream mode enable
+2019-12-27 10:59:55,926 INFO 13913 [egg-mysql] connecting root@127.0.0.1:3306/my_blog
+2019-12-27 10:59:56,014 INFO 13913 [egg-static] starting static serve /public/ -> /Users/umi/git/myblog/vue-blog-api/app/public
+2019-12-27 10:59:56,019 INFO 13913 [egg-security] use methodnoallow middleware
+2019-12-27 10:59:56,019 INFO 13913 [egg-security] use noopen middleware
+2019-12-27 10:59:56,020 INFO 13913 [egg-security] use nosniff middleware
+2019-12-27 10:59:56,020 INFO 13913 [egg-security] use xssProtection middleware
+2019-12-27 10:59:56,020 INFO 13913 [egg-security] use xframe middleware
+2019-12-27 10:59:56,021 INFO 13913 [egg-security] use dta middleware
+2019-12-27 10:59:56,021 INFO 13913 [egg-security] compose 6 middlewares into one security middleware
+2019-12-27 10:59:56,033 INFO 13913 [egg:core] dump config after load, 6ms
+2019-12-27 10:59:56,066 INFO 13913 [egg-watcher:application] watcher start success
+2019-12-27 10:59:56,097 INFO 13913 [egg-mysql] instance[0] status OK, rds currentTime: Fri Dec 27 2019 03:00:01 GMT+0800 (GMT+08:00)
+2019-12-27 10:59:56,105 INFO 13913 [egg:core] dump config after ready, 4ms

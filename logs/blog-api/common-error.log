@@ -1202,3 +1202,23 @@ name: "ER_NO_SUCH_TABLEError"
 pid: 8349
 hostname: umideMacBook-Air-2.local
 
+2019-12-27 08:45:03,171 ERROR 13228 nodejs.ClusterClientNoResponseError: client no response in 43905426ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/umi/git/myblog/vue-blog-api/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 13228
+hostname: umideMacBook-Air-2.local
+
+2019-12-27 09:32:31,220 ERROR 13228 nodejs.ClusterClientNoResponseError: client no response in 2848034ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/umi/git/myblog/vue-blog-api/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 13228
+hostname: umideMacBook-Air-2.local
+

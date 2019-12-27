@@ -225,3 +225,44 @@
 2019-12-26 18:01:47,359 INFO 13228 [egg:core] dump config after ready, 4ms
 2019-12-26 18:14:22,167 WARN 13228 [agent:development] reload worker because /Users/umi/git/myblog/vue-blog-api/app/controller/home.js change
 2019-12-26 18:14:21,953 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899679133,"size":491,"blocks":8,"atimeMs":1577355261884.0835,"mtimeMs":1577355261886.2507,"ctimeMs":1577355261886.2507,"birthtimeMs":1577088753049.483,"atime":"2019-12-26T10:14:21.884Z","mtime":"2019-12-26T10:14:21.886Z","ctime":"2019-12-26T10:14:21.886Z","birthtime":"2019-12-23T08:12:33.049Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-12-26 18:22:55,092 WARN 13228 [agent:development] reload worker because /Users/umi/git/myblog/vue-blog-api/app/controller/home.js change
+2019-12-26 18:22:54,883 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899679133,"size":514,"blocks":8,"atimeMs":1577355774815.787,"mtimeMs":1577355774816.5142,"ctimeMs":1577355774816.5142,"birthtimeMs":1577088753049.483,"atime":"2019-12-26T10:22:54.816Z","mtime":"2019-12-26T10:22:54.817Z","ctime":"2019-12-26T10:22:54.817Z","birthtime":"2019-12-23T08:12:33.049Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-12-27 08:45:03,179 ERROR 13228 nodejs.ClusterClientNoResponseError: client no response in 43905426ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/umi/git/myblog/vue-blog-api/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 13228
+hostname: umideMacBook-Air-2.local
+
+2019-12-27 09:32:31,220 ERROR 13228 nodejs.ClusterClientNoResponseError: client no response in 2848034ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/umi/git/myblog/vue-blog-api/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 13228
+hostname: umideMacBook-Air-2.local
+
+2019-12-27 10:59:49,485 WARN 13228 [agent:development] reload worker because /Users/umi/git/myblog/vue-blog-api/app/controller/home.js change
+2019-12-27 10:59:49,280 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899679133,"size":518,"blocks":8,"atimeMs":1577415589213.79,"mtimeMs":1577415589215.9495,"ctimeMs":1577415589215.9495,"birthtimeMs":1577088753049.483,"atime":"2019-12-27T02:59:49.214Z","mtime":"2019-12-27T02:59:49.216Z","ctime":"2019-12-27T02:59:49.216Z","birthtime":"2019-12-23T08:12:33.049Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-12-27 10:59:54,637 WARN 13228 [agent:development] reload worker because /Users/umi/git/myblog/vue-blog-api/app/controller/home.js change
+2019-12-27 10:59:54,382 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899679133,"size":517,"blocks":8,"atimeMs":1577415594370.0698,"mtimeMs":1577415594370.9949,"ctimeMs":1577415594370.9949,"birthtimeMs":1577088753049.483,"atime":"2019-12-27T02:59:54.370Z","mtime":"2019-12-27T02:59:54.371Z","ctime":"2019-12-27T02:59:54.371Z","birthtime":"2019-12-23T08:12:33.049Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-12-27 10:59:54,433 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899679133,"size":517,"blocks":8,"atimeMs":1577415594370.0698,"mtimeMs":1577415594370.9949,"ctimeMs":1577415594370.9949,"birthtimeMs":1577088753049.483,"atime":"2019-12-27T02:59:54.370Z","mtime":"2019-12-27T02:59:54.371Z","ctime":"2019-12-27T02:59:54.371Z","birthtime":"2019-12-23T08:12:33.049Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-12-27 11:13:53,095 WARN 13228 [agent:development] reload worker because /Users/umi/git/myblog/vue-blog-api/app/controller/home.js change
+2019-12-27 11:13:52,894 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899679133,"size":727,"blocks":8,"atimeMs":1577416432831.7898,"mtimeMs":1577416432832.5125,"ctimeMs":1577416432832.5125,"birthtimeMs":1577088753049.483,"atime":"2019-12-27T03:13:52.832Z","mtime":"2019-12-27T03:13:52.833Z","ctime":"2019-12-27T03:13:52.833Z","birthtime":"2019-12-23T08:12:33.049Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-12-27 11:16:28,359 WARN 13228 [agent:development] reload worker because /Users/umi/git/myblog/vue-blog-api/app/extend/help.js change
+2019-12-27 11:16:28,157 INFO 13228 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/umi/git/myblog/vue-blog-api/app/extend/help.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":12899850169,"size":36,"blocks":8,"atimeMs":1577416588094.6255,"mtimeMs":1577416588096.4802,"ctimeMs":1577416588096.4802,"birthtimeMs":1577353429110.7852,"atime":"2019-12-27T03:16:28.095Z","mtime":"2019-12-27T03:16:28.096Z","ctime":"2019-12-27T03:16:28.096Z","birthtime":"2019-12-26T09:43:49.111Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-12-27 11:18:53,608 INFO 14159 [egg:logger] init all loggers with options: {"dir":"/Users/umi/git/myblog/vue-blog-api/logs/blog-api","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"blog-api-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-12-27 11:18:53,628 INFO 14159 [egg:core] dump config after load, 9ms
+2019-12-27 11:18:53,718 INFO 14159 [egg-watcher] Start watching: ["/Users/umi/git/myblog/vue-blog-api/app","/Users/umi/git/myblog/vue-blog-api/config","/Users/umi/git/myblog/vue-blog-api/mocks","/Users/umi/git/myblog/vue-blog-api/mocks_proxy","/Users/umi/git/myblog/vue-blog-api/app.js"]
+2019-12-27 11:18:53,718 INFO 14159 [egg-watcher] Start watching: "/Users/umi/git/myblog/vue-blog-api/app"
+2019-12-27 11:18:53,718 INFO 14159 [egg-watcher] Start watching: "/Users/umi/git/myblog/vue-blog-api/config"
+2019-12-27 11:18:53,718 INFO 14159 [egg-watcher] Start watching: "/Users/umi/git/myblog/vue-blog-api/mocks"
+2019-12-27 11:18:53,719 INFO 14159 [egg-watcher] Start watching: "/Users/umi/git/myblog/vue-blog-api/mocks_proxy"
+2019-12-27 11:18:53,719 INFO 14159 [egg-watcher] Start watching: "/Users/umi/git/myblog/vue-blog-api/app.js"
+2019-12-27 11:18:53,719 INFO 14159 [egg-watcher:agent] watcher start success
+2019-12-27 11:18:53,748 INFO 14159 [egg:core] dump config after ready, 9ms
