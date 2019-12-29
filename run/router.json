@@ -10,5 +10,17 @@
     "stack": [
       "wrappedController"
     ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/forgetpsw",
+    "regexp": "/^\\/forgetpsw(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
   }
 ]
