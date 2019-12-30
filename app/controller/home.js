@@ -131,8 +131,10 @@ class HomeController extends Controller {
 
   async changepsw() {
     const { ctx, app } = this;
-    const { account, newpass } = ctx.request.body;
+    const { account, newpass, pass } = ctx.request.body;
     const userPassWord = ctx.helper.md5(newpass);
+    const oldPassWord = ctx.helper.md5(pass);
+
     const user = await app.mysql.get("user", { account });
     if (!user) {
       ctx.body = {
@@ -141,11 +143,19 @@ class HomeController extends Controller {
       };
       return;
     }
+    if (oldPassWord !== user.password) {
+      ctx.body = {
+        code: -10,
+        msg: "原密码输入错误!"
+      };
+      return;
+    }
     if (userPassWord == user.password) {
       ctx.body = {
         code: -2,
         msg: "原密码不能与新密码一致!"
       };
+      return;
     }
     const result = await this.app.mysql.update(
       "user",
