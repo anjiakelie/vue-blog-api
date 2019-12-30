@@ -7,11 +7,9 @@ class HomeController extends Controller {
     const { ctx, app } = this;
     let params = {};
     const { account, password } = ctx.request.body;
-
     const user = await app.mysql.get("user", {
       account
     });
-
     if (!user) {
       ctx.body = {
         code: "-10",
@@ -19,7 +17,6 @@ class HomeController extends Controller {
       };
       return;
     }
-
     if (user.state == "-1") {
       ctx.body = {
         code: "-1",
@@ -27,9 +24,7 @@ class HomeController extends Controller {
       };
       return;
     }
-
     const userPassWord = ctx.helper.md5(password);
-
     if (userPassWord !== user.password) {
       ctx.body = {
         code: "-2",
@@ -37,7 +32,6 @@ class HomeController extends Controller {
       };
       return;
     }
-
     ctx.body = {
       code: 1
     };
@@ -73,7 +67,7 @@ class HomeController extends Controller {
       password: userPassWord,
       code: 1,
       state: 10,
-      phone: phoneNum,
+      phoneNum,
       createTime: moment().format("YYYY-MM-DD HH:mm:ss")
     });
 
@@ -94,6 +88,77 @@ class HomeController extends Controller {
   async forgetpsw() {
     const { ctx, app } = this;
     let params = {};
+    const { account, sms, pass, phoneNum } = ctx.request.body;
+    const userPassWord = ctx.helper.md5(pass);
+    const user = await app.mysql.get("user", {
+      account
+    });
+    if (!user) {
+      ctx.body = {
+        code: -1,
+        msg: "该账号不存在!"
+      };
+      return;
+    }
+    if (user.phonenum !== phoneNum) {
+      ctx.body = {
+        code: -11,
+        msg: "手机号错误!"
+      };
+      return;
+    }
+    if (sms !== "1111") {
+      ctx.body = {
+        code: -10,
+        msg: "验证码错误!"
+      };
+      return;
+    }
+
+    const result = await this.app.mysql.update(
+      "user",
+      { password: userPassWord },
+      { where: { account } }
+    );
+    if (result.affectedRows === 1) {
+      ctx.body = {
+        code: 1,
+        msg: "密码重置成功"
+      };
+      return;
+    }
+  }
+
+  async changepsw() {
+    const { ctx, app } = this;
+    const { account, newpass } = ctx.request.body;
+    const userPassWord = ctx.helper.md5(newpass);
+    const user = await app.mysql.get("user", { account });
+    if (!user) {
+      ctx.body = {
+        code: -1,
+        msg: "该账号不存在!"
+      };
+      return;
+    }
+    if (userPassWord == user.password) {
+      ctx.body = {
+        code: -2,
+        msg: "原密码不能与新密码一致!"
+      };
+    }
+    const result = await this.app.mysql.update(
+      "user",
+      { password: userPassWord },
+      { where: { account } }
+    );
+    if (result.affectedRows === 1) {
+      ctx.body = {
+        code: 1,
+        msg: "密码修改成功!"
+      };
+      return;
+    }
   }
 }
 
