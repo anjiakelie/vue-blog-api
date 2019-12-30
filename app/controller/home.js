@@ -19,6 +19,7 @@ class HomeController extends Controller {
       };
       return;
     }
+
     if (user.state == "-1") {
       ctx.body = {
         code: "-1",
@@ -28,8 +29,7 @@ class HomeController extends Controller {
     }
 
     const userPassWord = ctx.helper.md5(password);
-    console.log("userPassWord-->", userPassWord);
-    console.log("user.password-->", user.password);
+
     if (userPassWord !== user.password) {
       ctx.body = {
         code: "-2",
@@ -43,14 +43,13 @@ class HomeController extends Controller {
     };
   }
 
-  async forgetpsw() {
+  async register() {
     const { ctx, app } = this;
     let params = {};
-    const { account, pass, sms } = ctx.request.body;
+    const { account, pass, sms, phoneNum } = ctx.request.body;
     const userPassWord = ctx.helper.md5(pass);
-    const userId = moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18);
-    console.log("userId-->", userId);
-    const conn = await app.mysql.beginTransaction(); // 初始化事务
+    const userId = moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18); //这是字符串的拼接
+    console.log("sms-->", sms);
     const hasUser = await app.mysql.get("user", {
       account
     });
@@ -61,37 +60,40 @@ class HomeController extends Controller {
       };
       return;
     }
-
-    try {
-      const result = await conn.insert("user", {
-        id: userId,
-        account,
-        password: userPassWord,
-        code: 1,
-        state: 10,
-        createTime: moment().format("YYYY-MM-DD HH:mm:ss")
-      });
-      await conn.commit(); // 提交事务
-      if (result.affectedRows === 1) {
-        ctx.body = {
-          code: 0,
-          msg: "提交成功"
-        };
-        return;
-      }
-    } catch (err) {
-      await conn.rollback(); // 一定记得捕获异常后回滚事务！！
+    if (sms !== "1111") {
       ctx.body = {
-        code: -1,
-        msg: "提交失败"
+        code: -10,
+        msg: "验证码错误!"
       };
-      ctx.logger.info("error--->", err);
-      throw err;
+      return;
     }
+    const result = await app.mysql.insert("user", {
+      id: userId,
+      account,
+      password: userPassWord,
+      code: 1,
+      state: 10,
+      phone: phoneNum,
+      createTime: moment().format("YYYY-MM-DD HH:mm:ss")
+    });
+
+    if (result.affectedRows === 1) {
+      ctx.body = {
+        code: 1,
+        msg: "提交成功"
+      };
+      return;
+    }
+
     ctx.body = {
       code: -1,
       msg: "提交失败"
     };
+  }
+
+  async forgetpsw() {
+    const { ctx, app } = this;
+    let params = {};
   }
 }
 
