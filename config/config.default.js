@@ -32,7 +32,7 @@ module.exports = appInfo => {
       host: "localhost",
       port: "3306",
       user: "root",
-      password: "111111", //这个密码有点奇葩，连接主机的密码，不是连接数据库的密码  mysqlpwd
+      password: "mysqlpwd", //这个密码有点奇葩，连接主机的密码，不是连接数据库的密码  mysqlpwd 111111
       database: "my_blog"
     },
     app: true,

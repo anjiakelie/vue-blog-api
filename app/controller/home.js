@@ -32,6 +32,8 @@ class HomeController extends Controller {
       };
       return;
     }
+    ctx.session.account = user.account;
+    console.log("ctx.session-->", ctx.session);
     ctx.body = {
       code: 1
     };
@@ -131,6 +133,8 @@ class HomeController extends Controller {
 
   async changepsw() {
     const { ctx, app } = this;
+    // console.log("account-->", ctx.session.account);
+
     const { account, newpass, pass } = ctx.request.body;
     const userPassWord = ctx.helper.md5(newpass);
     const oldPassWord = ctx.helper.md5(pass);
