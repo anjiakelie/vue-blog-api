@@ -23,6 +23,7 @@ module.exports = appInfo => {
   };
 
   exports.cors = {
+    //解决跨域问题
     origin: "*",
     allowMethods: "GET,HEAD,PUT,POST,DELETE,PATCH"
   };
@@ -37,6 +38,15 @@ module.exports = appInfo => {
     },
     app: true,
     agent: false
+  };
+
+  config.oAuth2Server = {
+    debug: appInfo.env === "local",
+    grants: ["password"], // grants:['password','authorization_code','refresh_token']
+    clientId: "kyj_client", // 客户端ID
+    clientSecret: "111111", // 客户端密码
+    accessTokenLifetime: 7200, //自定义访问token的有效，默认一个小时有效期
+    refreshTokenLifetime: 86400 //自定义刷新token的有效时间，默认是15天有效期
   };
 
   // add your user config here
