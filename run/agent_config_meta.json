@@ -175,14 +175,15 @@
       "egg": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-cors": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-mysql": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "egg-oauth2-server": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-redis": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-scripts": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-sequelize": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-session-redis": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
-      "moment": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-validate": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-view-ejs": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "egg-wechat-api": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
+      "moment": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js",
       "mysql2": "E:\\my-blog\\vue-blog-api\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
