@@ -1,15 +1,18 @@
 "use strict";
 const path = require("path");
-// const nconf = require('nconf');//用在mock的
+// const nconf = require('nconf');//用在mocker的
 module.exports = app => {
   // nconf.use('file',{
   //   file:path.join(app.config.baseDir,'app/mock/db.json');
   // })
+  // 这些方法是由我们自己定义的，需要重新改，因为这里使用的是mongoDb
+
   class Model {
     constructor(ctx) {
       this.ctx = ctx;
     }
     async getClient(clientId, clientSecret) {
+      // 自己调用的方法，然后ID和密码都是在配置那里自己取的
       // const client = nconf.get('client');
       if (
         clientId !== clientId.clientId ||

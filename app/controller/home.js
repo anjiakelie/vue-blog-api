@@ -3,6 +3,10 @@ const Controller = require("egg").Controller;
 const moment = require("moment");
 
 class HomeController extends Controller {
+  async authenticate() {
+    // 调用这个函数，就返回一个ok有啥用？？
+    this.ctx.body = { result: "ok" };
+  }
   async login() {
     const { ctx, app } = this;
     let params = {};
