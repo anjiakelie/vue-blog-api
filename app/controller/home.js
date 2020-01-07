@@ -10,6 +10,7 @@ class HomeController extends Controller {
   async login() {
     const { ctx, app } = this;
     let params = {};
+    let data = {};
     const { account, password } = ctx.request.body;
     const user = await app.mysql.get("user", {
       account
@@ -36,10 +37,17 @@ class HomeController extends Controller {
       };
       return;
     }
-    ctx.session.account = user.account;
-    console.log("ctx.session-->", ctx.session);
+    ctx.session.account = user.account; // 后台存个session
+    const { Id, name, state, code } = user;
+    data.Id = Id;
+    data.account = account;
+    data.name = name;
+    data.state = state;
+    data.code = code;
+    console.log("data-->", data);
     ctx.body = {
-      code: 1
+      code: 1,
+      data: data
     };
   }
 
