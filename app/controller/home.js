@@ -37,14 +37,13 @@ class HomeController extends Controller {
       };
       return;
     }
-    ctx.session.account = user.account; // 后台存个session
     const { Id, name, state, code } = user;
     data.Id = Id;
     data.account = account;
     data.name = name;
     data.state = state;
     data.code = code;
-    console.log("data-->", data);
+    ctx.session.userInfo = data; // 后台存个session
     ctx.body = {
       code: 1,
       data: data
@@ -57,7 +56,6 @@ class HomeController extends Controller {
     const { account, pass, sms, phoneNum } = ctx.request.body;
     const userPassWord = ctx.helper.md5(pass);
     const userId = moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18); //这是字符串的拼接
-    console.log("sms-->", sms);
     const hasUser = await app.mysql.get("user", {
       account
     });
@@ -145,7 +143,6 @@ class HomeController extends Controller {
 
   async changepsw() {
     const { ctx, app } = this;
-    // console.log("account-->", ctx.session.account);
 
     const { account, newpass, pass } = ctx.request.body;
     const userPassWord = ctx.helper.md5(newpass);
@@ -185,6 +182,13 @@ class HomeController extends Controller {
       };
       return;
     }
+  }
+  async loginout() {
+    const { ctx } = this;
+    ctx.session = null;
+    ctx.body = {
+      code: 1
+    };
   }
 }
 

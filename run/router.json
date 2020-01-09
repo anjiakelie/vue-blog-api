@@ -44,7 +44,31 @@
     "path": "/changepsw",
     "regexp": "/^\\/changepsw(?:\\/(?=$))?$/",
     "stack": [
-      "rbac",
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/loginout",
+    "regexp": "/^\\/loginout(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/messageboard",
+    "regexp": "/^\\/messageboard(?:\\/(?=$))?$/",
+    "stack": [
       "wrappedController"
     ]
   }

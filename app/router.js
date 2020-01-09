@@ -10,7 +10,9 @@ module.exports = app => {
   router.post("/login", controller.home.login);
   router.post("/forgetpsw", controller.home.forgetpsw);
   router.post("/register", controller.home.register);
-  router.post("/changepsw", onlineState, controller.home.changepsw);
+  router.post("/changepsw", controller.home.changepsw);
+  router.get("/loginout", controller.home.loginout);
+  router.post("/messageboard", controller.messageBoard.index);
   // 他会自己调用oauth的依赖的方法
   // router.all("/user/token", oAuth2Server.token(), controller.token.index); //前端调用的token接口，all是所有都会发起这个请求
 

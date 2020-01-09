@@ -2,11 +2,13 @@
 //前后端分离不能使用中间件
 module.exports = () => {
   return async function rbac(ctx, next) {
-    const { account } = ctx.session;
-    console.log("account-->", account);
-    if (!account) {
+    const { userInfo } = ctx.session;
+    if (!userInfo) {
       ctx.logger.debug("[未登录]");
-      return await ctx.redirect("/login");
+      ctx.body = {
+        code: 2,
+        msg: "请您先登录!"
+      };
     } else {
       ctx.logger.debug("[已登录]");
       await next();
