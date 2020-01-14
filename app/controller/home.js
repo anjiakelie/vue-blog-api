@@ -53,7 +53,7 @@ class HomeController extends Controller {
   async register() {
     const { ctx, app } = this;
     let params = {};
-    const { account, pass, sms, phoneNum } = ctx.request.body;
+    const { account, pass, sms, phoneNum, name } = ctx.request.body;
     const userPassWord = ctx.helper.md5(pass);
     const userId = moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18); //这是字符串的拼接
     const hasUser = await app.mysql.get("user", {
@@ -79,6 +79,7 @@ class HomeController extends Controller {
       password: userPassWord,
       code: 1,
       state: 10,
+      name,
       phoneNum,
       createTime: moment().format("YYYY-MM-DD HH:mm:ss")
     });
