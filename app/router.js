@@ -15,6 +15,10 @@ module.exports = app => {
   router.post("/messageboard", controller.messageBoard.index); //留言板提交
   router.post("/managementIndex", controller.management.index); // 后台管理默认的search
   router.post("/managementSearch", controller.management.search); // 后台管理点击的search
+  router.post(
+    "/deleteOneManagement",
+    controller.management.deleteOneManagement
+  ); // 后台管理点击最外层删除的search
   // 他会自己调用oauth的依赖的方法
   // router.all("/user/token", oAuth2Server.token(), controller.token.index); //前端调用的token接口，all是所有都会发起这个请求
 
