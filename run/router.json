@@ -90,18 +90,6 @@
       "POST"
     ],
     "paramNames": [],
-    "path": "/managementSearch",
-    "regexp": "/^\\/managementSearch(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "POST"
-    ],
-    "paramNames": [],
     "path": "/deleteOneManagement",
     "regexp": "/^\\/deleteOneManagement(?:\\/(?=$))?$/",
     "stack": [

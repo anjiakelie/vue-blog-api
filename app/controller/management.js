@@ -5,60 +5,69 @@ const moment = require("moment");
 class manageMentController extends Controller {
   async index() {
     const { ctx, app } = this;
-    let pageNum = 7; //当前页面数据总数
-    // const { name, content, account, value1 } = ctx.request.body;
-    let params = {};
-    let sql = "SELECT a.postId,a.account,a.content,a.createTime,b.name";
-    sql += " FROM message_board a LEFT JOIN user b ON a.id = b.Id";
-    const result = await app.mysql.query(sql);
-    let countSql;
-    countSql = " SELECT COUNT (*) as allDataNum FROM message_board ";
-    const count = await this.app.mysql.query(countSql); // 数据总数
-    if (result) {
-      ctx.body = {
-        code: 1,
-        result,
-        count
-      };
+    const {
+      pageSize,
+      pageNum,
+      name,
+      content,
+      account,
+      value1
+    } = ctx.request.body;
+    let upageNum;
+    if (pageNum) {
+      upageNum = pageNum - 1;
     } else {
-      ctx.body = {
-        code: -1,
-        msg: "亲！出错了哦"
-      };
+      upageNum = 0;
     }
-  }
-
-  async search() {
-    const { ctx, app } = this;
-    const { name, content, account, value1 } = ctx.request.body;
     let params = {};
-    let sql = " SELECT a.postId,a.account,a.content,a.createTime,b.name ";
-    sql += " FROM message_board a LEFT JOIN user b ON a.id = b.Id ";
-    sql += " where 1=1 ";
+    let countParams = {};
+    let sql = "SELECT a.postId,a.account,a.content,a.createTime,b.name";
+    let countSql =
+      " SELECT COUNT (*) as allDataNum FROM message_board a LEFT JOIN user b ON a.id = b.Id ";
+
+    sql += " FROM message_board a LEFT JOIN user b ON a.id = b.Id";
+    sql += " where 1=1 "; // 查询条件太多的时候需要
+    countSql += "where 1=1";
     if (value1) {
       // let date1 = value1[0].slice(0, 10);
       // let date2 = value1[1].slice(0, 10);
       sql += " and a.createTime between :date1 and :date2 ";
       params.date1 = value1[0] + "%";
       params.date2 = value1[1] + "%";
+
+      countSql += " and a.createTime between :date1 and :date2 ";
+      countParams.date1 = value1[0] + "%";
+      countParams.date2 = value1[1] + "%";
     }
     if (name) {
       sql += " and b.name like :name ";
       params.name = "%" + name + "%";
+
+      countSql += " and b.name like :name ";
+      countParams.name = "%" + name + "%";
     }
     if (account) {
       sql += " and a.account like :account ";
-      console.log("account-->", account);
       params.account = "%" + account + "%";
+
+      countSql += " and a.account like :account ";
+      countParams.account = "%" + account + "%";
     }
     if (content) {
       sql += " and a.content like :content ";
       params.content = "%" + content + "%";
+
+      countSql += " and a.content like :content ";
+      countParams.content = "%" + content + "%";
     }
-    const result = await this.app.mysql.query(sql, params);
-    let countSql;
-    countSql = " SELECT COUNT (*) as allDataNum FROM message_board ";
-    const count = await this.app.mysql.query(countSql); // 数据总数
+    if (pageSize) {
+      sql += " limit :pageNum,:pageSize ";
+      params.pageSize = pageSize;
+      params.pageNum = upageNum * pageSize;
+    }
+    const result = await app.mysql.query(sql, params);
+
+    const count = await app.mysql.query(countSql, countParams); // 数据总数
     if (result) {
       ctx.body = {
         code: 1,
@@ -76,7 +85,6 @@ class manageMentController extends Controller {
   async deleteOneManagement() {
     const { ctx, app } = this;
     const { postId } = ctx.request.body;
-    console.log("postId-->", postId);
     let sql;
     let params = {};
     if (postId) {
@@ -84,13 +92,19 @@ class manageMentController extends Controller {
       params.postId = postId;
     }
     const result = await this.app.mysql.delete("message_board", params);
+    let countSql;
+    countSql = " SELECT COUNT (*) as allDataNum FROM message_board ";
+    const count = await this.app.mysql.query(countSql); // 数据总数
     if (result) {
       ctx.body = {
-        code: 1
+        code: 1,
+        count,
+        msg: "留言删除成功!"
       };
     } else {
       ctx.body = {
-        code: -1
+        code: -1,
+        msg: "留言删除失败!"
       };
     }
   }
