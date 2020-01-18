@@ -6,11 +6,13 @@ class messageBoardController extends Controller {
   async index() {
     const { ctx, app } = this;
     const { userId, content, account } = ctx.request.body;
+    let postId = moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18);
     const result = await app.mysql.insert("message_board", {
       id: userId,
       content,
       account,
-      createTime: moment().format("YYYY-MM-DD HH:mm:ss")
+      postId,
+      createTime: moment().format("YYYY-MM-DD")
     });
     if (result.affectedRows === 1) {
       ctx.body = {
