@@ -11,7 +11,7 @@ class manageMentController extends Controller {
       name,
       content,
       account,
-      value1
+      value1 //时间
     } = ctx.request.body;
     let upageNum;
     if (pageNum) {
@@ -60,6 +60,9 @@ class manageMentController extends Controller {
       countSql += " and a.content like :content ";
       countParams.content = "%" + content + "%";
     }
+    sql += " order by a.createTime desc ";
+    // countSql += " order by desc ";
+
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
       params.pageSize = pageSize;

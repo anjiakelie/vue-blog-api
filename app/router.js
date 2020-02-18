@@ -13,12 +13,20 @@ module.exports = app => {
   router.post("/changepsw", controller.home.changepsw); //修改密码
   router.get("/loginout", controller.home.loginout); //退出登录
   router.post("/messageboard", controller.messageBoard.index); //留言板提交
-  router.post("/managementIndex", controller.management.index); // 后台管理默认的search
+  router.post("/managementIndex", controller.management.index); // 留言板管理后台管理默认的search
   router.post(
     "/deleteOneManagement",
     controller.management.deleteOneManagement
   ); // 后台管理点击最外层删除的search
-
+  router.post("/codeManagementIndex", controller.codeManagement.index); // 权限管理后台管理默认的search
+  router.post(
+    "/codeManagementDeleteUser",
+    controller.codeManagement.deleteUser
+  ); // 删除用户
+  router.post(
+    "/codeManagementChangeUserCode",
+    controller.codeManagement.changeUserCode
+  ); // 修改用户权限
   // 他会自己调用oauth的依赖的方法
   // router.all("/user/token", oAuth2Server.token(), controller.token.index); //前端调用的token接口，all是所有都会发起这个请求
 
