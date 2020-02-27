@@ -87,21 +87,81 @@ class manageMentController extends Controller {
 
   async deleteOneManagement() {
     const { ctx, app } = this;
-    const { postId } = ctx.request.body;
-    let sql;
-    let params = {};
-    if (postId) {
-      sql += " and postId like :postId ";
-      params.postId = postId;
+    const {
+      currentPage,
+      pageSize,
+      name,
+      account,
+      value1,
+      content,
+      postId
+    } = ctx.request.body;
+    console.log("postId-->", postId);
+    let upageNum;
+    if (currentPage) {
+      upageNum = currentPage - 1;
+    } else {
+      upageNum = 0;
     }
-    const result = await this.app.mysql.delete("message_board", params);
+    let params = {};
+    let countParams = {};
     let countSql;
+    let sql = " SELECT a.account,a.content,a.createTime,a.postId,b.name ";
+    sql += " FROM message_board a LEFT JOIN user b ON a.id = b.Id ";
+    sql += " where 1=1 "; // 查询条件太多的时候需要
+    countSql += " where 1=1 ";
     countSql = " SELECT COUNT (*) as allDataNum FROM message_board ";
+
+    if (value1) {
+      // let date1 = value1[0].slice(0, 10);
+      // let date2 = value1[1].slice(0, 10);
+      sql += " and a.createTime between :date1 and :date2 ";
+      params.date1 = value1[0] + "%";
+      params.date2 = value1[1] + "%";
+
+      countSql += " and a.createTime between :date1 and :date2 ";
+      countParams.date1 = value1[0] + "%";
+      countParams.date2 = value1[1] + "%";
+    }
+    if (name) {
+      sql += " and b.name like :name ";
+      params.name = "%" + name + "%";
+
+      countSql += " and b.name like :name ";
+      countParams.name = "%" + name + "%";
+    }
+    if (account) {
+      sql += " and a.account like :account ";
+      params.account = "%" + account + "%";
+
+      countSql += " and a.account like :account ";
+      countParams.account = "%" + account + "%";
+    }
+    if (content) {
+      sql += " and a.content like :content ";
+      params.content = "%" + content + "%";
+
+      countSql += " and a.content like :content ";
+      countParams.content = "%" + content + "%";
+    }
+    sql += " order by a.createTime desc ";
+    // countSql += " order by desc ";
+
+    if (pageSize) {
+      sql += " limit :pageNum,:pageSize ";
+      params.pageSize = pageSize;
+      params.pageNum = upageNum * pageSize;
+    }
+    const result = await app.mysql.delete("message_board", {
+      postId: postId
+    });
+    const deleteResult = await app.mysql.query(sql, params);
     const count = await this.app.mysql.query(countSql); // 数据总数
     if (result) {
       ctx.body = {
         code: 1,
         count,
+        deleteResult,
         msg: "留言删除成功!"
       };
     } else {

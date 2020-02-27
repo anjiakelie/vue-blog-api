@@ -112,20 +112,93 @@ class codeManagementController extends Controller {
   }
   async deleteUser() {
     const { ctx, app } = this;
-    const { UserId } = ctx.request.body;
+    const {
+      pageSize,
+      pageNum,
+      name,
+      account,
+      UserId,
+      value1 //时间
+    } = ctx.request.body;
+    let upageNum;
+    if (pageNum) {
+      upageNum = pageNum - 1;
+    } else {
+      upageNum = 0;
+    }
+    let params = {};
+    let countParams = {};
+    let sql = " SELECT account,code,state,Id,name,createTime from user ";
     let countSql = " SELECT COUNT (*) as allDataNum FROM user ";
+    sql += " where 1=1 ";
+    countSql += " where 1=1 ";
+    // sql += " order by desc "; //写在最后，但要在分页前
+    if (value1) {
+      // let date1 = value1[0].slice(0, 10);
+      // let date2 = value1[1].slice(0, 10);
+      sql += " and createTime between :date1 and :date2 ";
+      params.date1 = value1[0] + "%";
+      params.date2 = value1[1] + "%";
+      countSql += " and createTime between :date1 and :date2 ";
+      countParams.date1 = value1[0] + "%";
+      countParams.date2 = value1[1] + "%";
+    }
+    if (name) {
+      sql += " and name like :name ";
+      params.name = "%" + name + "%";
+
+      countSql += " and name like :name ";
+      countParams.name = "%" + name + "%";
+    }
+    if (account) {
+      sql += " and account like :account ";
+      params.account = "%" + account + "%";
+
+      countSql += " and account like :account ";
+      countParams.account = "%" + account + "%";
+    }
+    sql += " order by createTime asc ";
+
     const result = await this.app.mysql.delete("user", {
       Id: UserId
     });
     const resultM = await this.app.mysql.delete("message_board", {
       id: UserId
     });
-    const count = await app.mysql.query(countSql); // 数据总数
-    if (result) {
+
+    if (pageSize) {
+      sql += " limit :pageNum,:pageSize ";
+      params.pageSize = pageSize;
+      params.pageNum = upageNum * pageSize;
+    }
+
+    const deleteResult = await app.mysql.query(sql, params);
+
+    if (deleteResult) {
+      deleteResult.forEach(item => {
+        let createTime = item.createTime.slice(0, 10);
+        item.createTime = createTime;
+        switch (item.code) {
+          case 1:
+            item.code = "普通游客";
+            break;
+          case 10:
+            item.code = "普通管理员";
+            break;
+          case 99:
+            item.code = "哥哥";
+            break;
+        }
+      });
+    }
+
+    const count = await app.mysql.query(countSql, countParams); // 数据总数
+    if (deleteResult) {
       ctx.body = {
         code: 1,
         msg: "删除该用户成功！",
-        count
+        count,
+        deleteResult
       };
     } else {
       ctx.body = {
