@@ -13,10 +13,10 @@ module.exports = app => {
   router.post("/changepsw", controller.home.changepsw); //修改密码
   router.get("/loginout", controller.home.loginout); //退出登录
   router.post("/messageboard", controller.messageBoard.index); //留言板提交
-  router.post("/managementIndex", controller.management.index); // 留言板管理后台管理默认的search
+  router.post("/managementIndex", controller.messageManagement.index); // 留言板管理后台管理默认的search
   router.post(
     "/deleteOneManagement",
-    controller.management.deleteOneManagement
+    controller.messageManagement.deleteOneManagement
   ); // 后台管理点击最外层删除的search
   router.post("/codeManagementIndex", controller.codeManagement.index); // 权限管理后台管理默认的search
   router.post(

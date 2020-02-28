@@ -23,14 +23,15 @@ class codeManagementController extends Controller {
     let sql = " SELECT account,code,state,Id,name,createTime from user ";
     let countSql = " SELECT COUNT (*) as allDataNum FROM user ";
     sql += " where 1=1 ";
-    countSql += " where 1=1";
-    // sql += " order by desc "; //写在最后，但要在分页前
+    countSql += " where 1=1 ";
+
     if (value1) {
       // let date1 = value1[0].slice(0, 10);
       // let date2 = value1[1].slice(0, 10);
       sql += " and createTime between :date1 and :date2 ";
       params.date1 = value1[0] + "%";
       params.date2 = value1[1] + "%";
+
       countSql += " and createTime between :date1 and :date2 ";
       countParams.date1 = value1[0] + "%";
       countParams.date2 = value1[1] + "%";
@@ -49,7 +50,7 @@ class codeManagementController extends Controller {
       countSql += " and account like :account ";
       countParams.account = "%" + account + "%";
     }
-    sql += " order by createTime asc ";
+    sql += " order by createTime asc "; //asc正序，desc倒序
 
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
@@ -132,13 +133,14 @@ class codeManagementController extends Controller {
     let countSql = " SELECT COUNT (*) as allDataNum FROM user ";
     sql += " where 1=1 ";
     countSql += " where 1=1 ";
-    // sql += " order by desc "; //写在最后，但要在分页前
+
     if (value1) {
       // let date1 = value1[0].slice(0, 10);
       // let date2 = value1[1].slice(0, 10);
       sql += " and createTime between :date1 and :date2 ";
       params.date1 = value1[0] + "%";
       params.date2 = value1[1] + "%";
+
       countSql += " and createTime between :date1 and :date2 ";
       countParams.date1 = value1[0] + "%";
       countParams.date2 = value1[1] + "%";
@@ -157,7 +159,6 @@ class codeManagementController extends Controller {
       countSql += " and account like :account ";
       countParams.account = "%" + account + "%";
     }
-    sql += " order by createTime asc ";
 
     const result = await this.app.mysql.delete("user", {
       Id: UserId
@@ -165,6 +166,7 @@ class codeManagementController extends Controller {
     const resultM = await this.app.mysql.delete("message_board", {
       id: UserId
     });
+    sql += " order by createTime asc ";
 
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
@@ -172,7 +174,8 @@ class codeManagementController extends Controller {
       params.pageNum = upageNum * pageSize;
     }
 
-    const deleteResult = await app.mysql.query(sql, params);
+    const deleteResult = await app.mysql.query(sql, params); //返回删除之后当前的tableData
+    const count = await app.mysql.query(countSql, countParams); // 数据总数
 
     if (deleteResult) {
       deleteResult.forEach(item => {
@@ -192,7 +195,6 @@ class codeManagementController extends Controller {
       });
     }
 
-    const count = await app.mysql.query(countSql, countParams); // 数据总数
     if (deleteResult) {
       ctx.body = {
         code: 1,

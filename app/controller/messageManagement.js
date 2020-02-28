@@ -21,13 +21,12 @@ class manageMentController extends Controller {
     }
     let params = {};
     let countParams = {};
-    let sql = "SELECT a.postId,a.account,a.content,a.createTime,b.name";
+    let sql = " SELECT a.postId,a.account,a.content,a.createTime,b.name ";
     let countSql =
       " SELECT COUNT (*) as allDataNum FROM message_board a LEFT JOIN user b ON a.id = b.Id ";
-
-    sql += " FROM message_board a LEFT JOIN user b ON a.id = b.Id";
+    sql += " FROM message_board a LEFT JOIN user b ON a.id = b.Id ";
     sql += " where 1=1 "; // 查询条件太多的时候需要
-    countSql += "where 1=1";
+    countSql += " where 1=1 ";
     if (value1) {
       // let date1 = value1[0].slice(0, 10);
       // let date2 = value1[1].slice(0, 10);
@@ -61,7 +60,6 @@ class manageMentController extends Controller {
       countParams.content = "%" + content + "%";
     }
     sql += " order by a.createTime desc ";
-    // countSql += " order by desc ";
 
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
@@ -96,7 +94,6 @@ class manageMentController extends Controller {
       content,
       postId
     } = ctx.request.body;
-    console.log("postId-->", postId);
     let upageNum;
     if (currentPage) {
       upageNum = currentPage - 1;
@@ -145,7 +142,6 @@ class manageMentController extends Controller {
       countParams.content = "%" + content + "%";
     }
     sql += " order by a.createTime desc ";
-    // countSql += " order by desc ";
 
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
