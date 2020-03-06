@@ -27,6 +27,13 @@ module.exports = app => {
     "/codeManagementChangeUserCode",
     controller.codeManagement.changeUserCode
   ); // 修改用户权限
+
+  router.get(`/it/:id`, controller.it.index); // it页面
+
+  /////////////////////// it文章管理
+  router.post("/itManagementIndex", controller.itArticleManagement.index); // it文章管理的search
+  router.post("/addItArticle", controller.itArticleManagement.addItArticle); // 增加新文章
+
   // 他会自己调用oauth的依赖的方法
   // router.all("/user/token", oAuth2Server.token(), controller.token.index); //前端调用的token接口，all是所有都会发起这个请求
 
