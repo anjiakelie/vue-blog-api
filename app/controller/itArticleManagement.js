@@ -15,10 +15,12 @@ class itArticleManagementController extends Controller {
     let params = {};
     let countParams = {};
     let sql =
-      " SELECT a.createTime,a.itTitle,a.itInt,a.itType,b.name,b.account ";
+      " SELECT a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
     sql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
 
-    let countSql = " SELECT COUNT (*) as allDataNum FROM it ";
+    let countSql = " SELECT COUNT (*) as allDataNum ";
+    countSql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
+
     sql += " where 1=1 ";
     countSql += " where 1=1 ";
 
@@ -38,16 +40,16 @@ class itArticleManagementController extends Controller {
       params.itType = "%" + itType + "%";
 
       countSql += " and a.itType like :itType ";
-      countParams.account = "%" + itType + "%";
+      countParams.itType = "%" + itType + "%";
     }
     if (account) {
       sql += " and b.account like :account ";
       params.account = "%" + account + "%";
 
-      // countSql += " and account like :account ";
-      // countParams.account = "%" + account + "%";
+      countSql += " and b.account like :account ";
+      countParams.account = "%" + account + "%";
     }
-    sql += " order by createTime asc "; //asc正序，desc倒序
+    sql += " order by a.createTime desc "; //asc正序，desc倒序
 
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
@@ -56,7 +58,7 @@ class itArticleManagementController extends Controller {
     }
     const result = await app.mysql.query(sql, params);
     const count = await app.mysql.query(countSql, countParams); // 数据总数
-    console.log("result-->", result);
+
     if (result) {
       ctx.body = {
         code: 1,
@@ -78,7 +80,10 @@ class itArticleManagementController extends Controller {
       itInt,
       itType,
       userId,
-      userName
+      pageSize,
+      pageNum,
+      account,
+      value1
     } = ctx.request.body;
     const itArticleId =
       moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18); //这是字符串的拼接
@@ -89,15 +94,154 @@ class itArticleManagementController extends Controller {
       itTitle,
       itInt,
       itType,
-      userName,
-      createTime: moment().format("YYYY-MM-DD")
+      createTime: moment().format("YYYY-MM-DD HH:mm:ss")
     });
-    if (result.affectedRows === 1) {
+
+    let upageNum;
+    if (pageNum) {
+      upageNum = pageNum - 1;
+    } else {
+      upageNum = 0;
+    }
+    let params = {};
+    let countParams = {};
+    let sql =
+      " SELECT a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
+    sql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
+
+    let countSql = " SELECT COUNT (*) as allDataNum ";
+    countSql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
+
+    sql += " where 1=1 ";
+    countSql += " where 1=1 ";
+
+    if (value1) {
+      // let date1 = value1[0].slice(0, 10);
+      // let date2 = value1[1].slice(0, 10);
+      sql += " and a.createTime between :date1 and :date2 ";
+      params.date1 = value1[0] + "%";
+      params.date2 = value1[1] + "%";
+
+      countSql += " and a.createTime between :date1 and :date2 ";
+      countParams.date1 = value1[0] + "%";
+      countParams.date2 = value1[1] + "%";
+    }
+    if (itType) {
+      sql += " and a.itType like :itType ";
+      params.itType = "%" + itType + "%";
+
+      countSql += " and a.itType like :itType ";
+      countParams.itType = "%" + itType + "%";
+    }
+    if (account) {
+      sql += " and b.account like :account ";
+      params.account = "%" + account + "%";
+
+      countSql += " and b.account like :account ";
+      countParams.account = "%" + account + "%";
+    }
+    sql += " order by a.createTime desc "; //asc正序，desc倒序
+
+    if (pageSize) {
+      sql += " limit :pageNum,:pageSize ";
+      params.pageSize = pageSize;
+      params.pageNum = upageNum * pageSize;
+    }
+    const resultData = await app.mysql.query(sql, params);
+    const count = await app.mysql.query(countSql, countParams); // 数据总数
+
+    if (result) {
       ctx.body = {
         code: 1,
-        msg: "新增文章成功!"
+        resultData,
+        count
       };
-      return;
+    } else {
+      ctx.body = {
+        code: -1,
+        msg: "亲！出错了哦"
+      };
+    }
+
+    // if (result.affectedRows === 1) {
+    //   ctx.body = {
+    //     code: 1,
+    //     msg: "新增文章成功!"
+    //   };
+    //   return;
+    // }
+  }
+  async deleteItArticle() {
+    const { ctx, app } = this;
+    const {
+      pageSize,
+      pageNum,
+      account,
+      value1,
+      itType,
+      itArticleId
+    } = ctx.request.body;
+    let upageNum;
+    if (pageNum) {
+      upageNum = pageNum - 1;
+    } else {
+      upageNum = 0;
+    }
+    let params = {};
+    let countParams = {};
+    let sql =
+      " SELECT a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
+    sql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
+
+    let countSql = " SELECT COUNT (*) as allDataNum ";
+    countSql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
+
+    sql += " where 1=1 ";
+    countSql += " where 1=1 ";
+
+    if (value1) {
+      // let date1 = value1[0].slice(0, 10);
+      // let date2 = value1[1].slice(0, 10);
+      sql += " and a.createTime between :date1 and :date2 ";
+      params.date1 = value1[0] + "%";
+      params.date2 = value1[1] + "%";
+
+      countSql += " and a.createTime between :date1 and :date2 ";
+      countParams.date1 = value1[0] + "%";
+      countParams.date2 = value1[1] + "%";
+    }
+
+    if (account) {
+      sql += " and a.account like :account ";
+      params.account = "%" + account + "%";
+
+      countSql += " and a.account like :account ";
+      countParams.account = "%" + account + "%";
+    }
+    sql += " order by a.createTime desc ";
+
+    if (pageSize) {
+      sql += " limit :pageNum,:pageSize ";
+      params.pageSize = pageSize;
+      params.pageNum = upageNum * pageSize;
+    }
+    const result = await app.mysql.delete("it", {
+      itArticleId: itArticleId
+    });
+    const deleteResult = await app.mysql.query(sql, params);
+    const count = await this.app.mysql.query(countSql); // 数据总数
+    if (result) {
+      ctx.body = {
+        code: 1,
+        count,
+        deleteResult,
+        msg: "文章删除成功!"
+      };
+    } else {
+      ctx.body = {
+        code: -1,
+        msg: "文章删除失败!"
+      };
     }
   }
 }

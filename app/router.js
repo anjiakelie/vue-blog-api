@@ -33,6 +33,10 @@ module.exports = app => {
   /////////////////////// it文章管理
   router.post("/itManagementIndex", controller.itArticleManagement.index); // it文章管理的search
   router.post("/addItArticle", controller.itArticleManagement.addItArticle); // 增加新文章
+  router.post(
+    "/deleteItArticle",
+    controller.itArticleManagement.deleteItArticle
+  ); // 删除文章
 
   // 他会自己调用oauth的依赖的方法
   // router.all("/user/token", oAuth2Server.token(), controller.token.index); //前端调用的token接口，all是所有都会发起这个请求

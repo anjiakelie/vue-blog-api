@@ -5,7 +5,7 @@ import 'egg';
 import ExportCodeManagement = require('../../../app/controller/codeManagement');
 import ExportHome = require('../../../app/controller/home');
 import ExportIt = require('../../../app/controller/it');
-import ExportItArticleManagement = re../../../app/controller/itArticleManagementicleManagement');
+import ExportItArticleManagement = require('../../../app/controller/itArticleManagement');
 import ExportMessageBoard = require('../../../app/controller/messageBoard');
 import ExportMessageManagement = require('../../../app/controller/messageManagement');
 import ExportToken = require('../../../app/controller/token');
