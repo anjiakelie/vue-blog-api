@@ -15,7 +15,7 @@ class itArticleManagementController extends Controller {
     let params = {};
     let countParams = {};
     let sql =
-      " SELECT a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
+      " SELECT a.itDesc,a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
     sql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
 
     let countSql = " SELECT COUNT (*) as allDataNum ";
@@ -58,7 +58,6 @@ class itArticleManagementController extends Controller {
     }
     const result = await app.mysql.query(sql, params);
     const count = await app.mysql.query(countSql, countParams); // 数据总数
-
     if (result) {
       ctx.body = {
         code: 1,
@@ -106,7 +105,7 @@ class itArticleManagementController extends Controller {
     let params = {};
     let countParams = {};
     let sql =
-      " SELECT a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
+      " SELECT a.itDesc,a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
     sql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
 
     let countSql = " SELECT COUNT (*) as allDataNum ";
@@ -190,7 +189,7 @@ class itArticleManagementController extends Controller {
     let params = {};
     let countParams = {};
     let sql =
-      " SELECT a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
+      " SELECT a.itDesc,a.itDesc,a.createTime,a.itTitle,a.itInt,a.itType,a.itArticleId,b.name,b.account ";
     sql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
 
     let countSql = " SELECT COUNT (*) as allDataNum ";

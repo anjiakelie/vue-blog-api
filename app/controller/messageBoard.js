@@ -12,7 +12,7 @@ class messageBoardController extends Controller {
       content,
       account,
       postId,
-      createTime: moment().format("YYYY-MM-DD")
+      createTime: moment().format("YYYY-MM-DD HH:mm:ss")
     });
     if (result.affectedRows === 1) {
       ctx.body = {
