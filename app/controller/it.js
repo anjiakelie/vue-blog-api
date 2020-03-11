@@ -61,5 +61,28 @@ class itController extends Controller {
       itTypeCountLength
     };
   }
+
+  async articleDetail() {
+    const { ctx, app } = this;
+    var itArticleId = ctx.params.itArticleId; //返回对象格式
+
+    let params = {};
+    // let sql = " SELECT * FROM  ";
+    let sql =
+      " SELECT a.itDesc,a.userId,a.itInt,a.itTitle,a.itArticleId,a.createTime,b.name ";
+    sql += " FROM it a LEFT JOIN user b ON a.userId = b.Id ";
+    sql += " where 1=1 ";
+    if (itArticleId) {
+      sql += " and itArticleId like :itArticleId ";
+      params.itArticleId = itArticleId;
+    }
+    const result = await app.mysql.query(sql, params);
+    if (result) {
+      ctx.body = {
+        code: 1,
+        result
+      };
+    }
+  }
 }
 module.exports = itController;

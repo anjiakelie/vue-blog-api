@@ -28,8 +28,10 @@ module.exports = app => {
     controller.codeManagement.changeUserCode
   ); // 修改用户权限
 
+  //////////////////// it页面
   router.post(`/it/:id`, controller.it.index); // it页面index
   router.get("/getItNum", controller.it.getItNum); // it页面的文章数量和标签数
+  router.get(`/it/article/:itArticleId`, controller.it.articleDetail); // it的详细页面
 
   /////////////////////// it文章管理
   router.post("/itManagementIndex", controller.itArticleManagement.index); // it文章管理的search

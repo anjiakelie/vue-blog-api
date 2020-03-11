@@ -82,7 +82,8 @@ class itArticleManagementController extends Controller {
       pageSize,
       pageNum,
       account,
-      value1
+      value1,
+      inItType
     } = ctx.request.body;
     const itArticleId =
       moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18); //这是字符串的拼接
@@ -92,7 +93,7 @@ class itArticleManagementController extends Controller {
       itDesc,
       itTitle,
       itInt,
-      itType,
+      itType: inItType,
       createTime: moment().format("YYYY-MM-DD HH:mm:ss")
     });
 
