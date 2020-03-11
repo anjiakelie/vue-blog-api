@@ -166,6 +166,9 @@ class codeManagementController extends Controller {
     const resultM = await this.app.mysql.delete("message_board", {
       id: UserId
     });
+    const resultIt = await this.app.mysql.delete("it", {
+      userId: UserId
+    });
     sql += " order by createTime asc ";
 
     if (pageSize) {
