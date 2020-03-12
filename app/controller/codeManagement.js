@@ -13,7 +13,7 @@ class codeManagementController extends Controller {
       value1 //时间
     } = ctx.request.body;
     let upageNum;
-    if (pageNum) {
+    if (pageNum > 0) {
       upageNum = pageNum - 1;
     } else {
       upageNum = 0;
@@ -122,7 +122,7 @@ class codeManagementController extends Controller {
       value1 //时间
     } = ctx.request.body;
     let upageNum;
-    if (pageNum) {
+    if (pageNum > 0) {
       upageNum = pageNum - 1;
     } else {
       upageNum = 0;

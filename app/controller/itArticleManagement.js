@@ -7,7 +7,7 @@ class itArticleManagementController extends Controller {
     const { ctx, app } = this;
     const { pageSize, pageNum, value1, account, itType } = ctx.request.body;
     let upageNum;
-    if (pageNum) {
+    if (pageNum > 0) {
       upageNum = pageNum - 1;
     } else {
       upageNum = 0;
@@ -98,7 +98,7 @@ class itArticleManagementController extends Controller {
     });
 
     let upageNum;
-    if (pageNum) {
+    if (pageNum > 0) {
       upageNum = pageNum - 1;
     } else {
       upageNum = 0;
@@ -182,7 +182,7 @@ class itArticleManagementController extends Controller {
       itArticleId
     } = ctx.request.body;
     let upageNum;
-    if (pageNum) {
+    if (pageNum > 0) {
       upageNum = pageNum - 1;
     } else {
       upageNum = 0;

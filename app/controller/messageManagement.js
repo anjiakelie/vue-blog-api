@@ -95,7 +95,7 @@ class manageMentController extends Controller {
       postId
     } = ctx.request.body;
     let upageNum;
-    if (currentPage) {
+    if (currentPage > 0) {
       upageNum = currentPage - 1;
     } else {
       upageNum = 0;
@@ -152,8 +152,9 @@ class manageMentController extends Controller {
       postId: postId
     });
     const deleteResult = await app.mysql.query(sql, params);
+
     const count = await this.app.mysql.query(countSql); // 数据总数
-    if (result) {
+    if (result || deleteResult) {
       ctx.body = {
         code: 1,
         count,
