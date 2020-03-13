@@ -11,6 +11,7 @@ module.exports = app => {
   router.post("/forgetpsw", controller.home.forgetpsw); //忘记密码
   router.post("/register", controller.home.register); //注册
   router.post("/changepsw", controller.home.changepsw); //修改密码
+  router.post("/changeusername", controller.home.changeusername); //忘记昵称
   router.get("/loginout", controller.home.loginout); //退出登录
   router.post("/messageboard", controller.messageBoard.index); //留言板提交
   router.post("/managementIndex", controller.messageManagement.index); // 留言板管理后台管理默认的search

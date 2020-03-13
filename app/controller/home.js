@@ -191,6 +191,20 @@ class HomeController extends Controller {
       code: 1
     };
   }
+
+  async changeusername() {
+    const { ctx, app } = this;
+    const { account, userName } = ctx.request.body;
+    const result = await app.mysql.update(
+      "user",
+      { name: userName },
+      { where: { account } }
+    );
+    ctx.body = {
+      code: 1,
+      msg: "修改昵称成功！"
+    };
+  }
 }
 
 module.exports = HomeController;
