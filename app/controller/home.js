@@ -179,7 +179,7 @@ class HomeController extends Controller {
     if (result.affectedRows === 1) {
       ctx.body = {
         code: 1,
-        msg: "密码修改成功!"
+        msg: "密码修改成功，请重新登录！"
       };
       return;
     }
