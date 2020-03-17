@@ -50,15 +50,21 @@ class itController extends Controller {
   }
   async getItNum() {
     const { ctx, app } = this;
+    let account = " 15919338632 ";
+    let sql =
+      " SELECT name from user  where 1=1  and account like 15919338632 ";
+    let params = {};
     let countSql = " SELECT COUNT (*) as allDataNum FROM it ";
     let countItType = " SELECT distinct itType FROM it ";
+    const bolgHostName = await app.mysql.query(sql);
     const count = await app.mysql.query(countSql);
     const itTypeCount = await app.mysql.query(countItType);
     let itTypeCountLength = itTypeCount.length;
     ctx.body = {
       code: 1,
       count,
-      itTypeCountLength
+      itTypeCountLength,
+      bolgHostName
     };
   }
 
