@@ -178,7 +178,7 @@
         "host": "localhost",
         "port": "3306",
         "user": "root",
-        "password": "<String len: 8>",
+        "password": "<String len: 6>",
         "database": "my_blog"
       }
     },
