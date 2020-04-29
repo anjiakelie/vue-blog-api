@@ -30,7 +30,7 @@ module.exports = appInfo => {
 
   config.mysql = {
     client: {
-      host: "localhost",
+      host: "93.90.74.229", // 数据区获取的地方ip 93.90.74.229 localhost
       port: "3306",
       user: "root",
       password: "111111", //这个密码有点奇葩，连接主机的密码，不是连接数据库的密码  mysqlpwd 111111
