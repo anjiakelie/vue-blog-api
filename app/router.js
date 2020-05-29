@@ -3,15 +3,17 @@
 /**
  * @param {Egg.Application} app - egg application
  */
-module.exports = app => {
+module.exports = (app) => {
   const { router, controller, oAuth2Server, middleware } = app;
-  const onlineState = middleware.onlineState(); //验证页面是否登录
-  // const onlineState = app.middleware.onlineState(); //验证页面是否登录
+  console.log("oAuth2Server-->", oAuth2Server);
+  // 前端获取token
+  // router.all("/login", oAuth2Server.token(), controller.login.index);
+
   router.post("/login", controller.home.login); //登录
   router.post("/forgetpsw", controller.home.forgetpsw); //忘记密码
   router.post("/register", controller.home.register); //注册
   router.post("/changepsw", controller.home.changepsw); //修改密码
-  router.post("/changeusername", controller.home.changeusername); //忘记昵称
+  router.post("/changeusername", controller.home.changeusername); //修改昵称
   router.get("/loginout", controller.home.loginout); //退出登录
   router.post("/messageboard", controller.messageBoard.index); //留言板提交
   router.post("/managementIndex", controller.messageManagement.index); // 留言板管理后台管理默认的search

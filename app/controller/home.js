@@ -13,19 +13,19 @@ class HomeController extends Controller {
     let data = {};
     const { account, password } = ctx.request.body;
     const user = await app.mysql.get("user", {
-      account
+      account,
     });
     if (!user) {
       ctx.body = {
         code: "-10",
-        msg: "该账号不存在!"
+        msg: "该账号不存在!",
       };
       return;
     }
     if (user.state == "-1") {
       ctx.body = {
         code: "-1",
-        msg: "该账号被停用!"
+        msg: "该账号被停用!",
       };
       return;
     }
@@ -33,7 +33,7 @@ class HomeController extends Controller {
     if (userPassWord !== user.password) {
       ctx.body = {
         code: "-2",
-        msg: "密码不正确!"
+        msg: "密码不正确!",
       };
       return;
     }
@@ -43,10 +43,9 @@ class HomeController extends Controller {
     data.name = name;
     data.state = state;
     data.code = code;
-    ctx.session.userInfo = data; // 后台存个session
     ctx.body = {
       code: 1,
-      data: data
+      data: data,
     };
   }
 
@@ -57,19 +56,19 @@ class HomeController extends Controller {
     const userPassWord = ctx.helper.md5(pass);
     const userId = moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18); //这是字符串的拼接
     const hasUser = await app.mysql.get("user", {
-      account
+      account,
     });
     if (hasUser) {
       ctx.body = {
         code: 10,
-        msg: "该用户已存在!"
+        msg: "该用户已存在!",
       };
       return;
     }
     if (sms !== "1111") {
       ctx.body = {
         code: -10,
-        msg: "验证码错误!"
+        msg: "验证码错误!",
       };
       return;
     }
@@ -81,20 +80,20 @@ class HomeController extends Controller {
       state: 10,
       name,
       phoneNum,
-      createTime: moment().format("YYYY-MM-DD HH:mm:ss")
+      createTime: moment().format("YYYY-MM-DD HH:mm:ss"),
     });
 
     if (result.affectedRows === 1) {
       ctx.body = {
         code: 1,
-        msg: "提交成功"
+        msg: "提交成功",
       };
       return;
     }
 
     ctx.body = {
       code: -1,
-      msg: "提交失败"
+      msg: "提交失败",
     };
   }
 
@@ -104,26 +103,26 @@ class HomeController extends Controller {
     const { account, sms, pass, phoneNum } = ctx.request.body;
     const userPassWord = ctx.helper.md5(pass);
     const user = await app.mysql.get("user", {
-      account
+      account,
     });
     if (!user) {
       ctx.body = {
         code: -1,
-        msg: "该账号不存在!"
+        msg: "该账号不存在!",
       };
       return;
     }
     if (user.phonenum !== phoneNum) {
       ctx.body = {
         code: -11,
-        msg: "手机号错误!"
+        msg: "手机号错误!",
       };
       return;
     }
     if (sms !== "1111") {
       ctx.body = {
         code: -10,
-        msg: "验证码错误!"
+        msg: "验证码错误!",
       };
       return;
     }
@@ -136,7 +135,7 @@ class HomeController extends Controller {
     if (result.affectedRows === 1) {
       ctx.body = {
         code: 1,
-        msg: "密码重置成功"
+        msg: "密码重置成功，请重新登录！",
       };
       return;
     }
@@ -153,21 +152,21 @@ class HomeController extends Controller {
     if (!user) {
       ctx.body = {
         code: -1,
-        msg: "该账号不存在!"
+        msg: "该账号不存在!",
       };
       return;
     }
     if (oldPassWord !== user.password) {
       ctx.body = {
         code: -10,
-        msg: "原密码输入错误!"
+        msg: "原密码输入错误!",
       };
       return;
     }
     if (userPassWord == user.password) {
       ctx.body = {
         code: -2,
-        msg: "原密码不能与新密码一致!"
+        msg: "原密码不能与新密码一致!",
       };
       return;
     }
@@ -179,7 +178,7 @@ class HomeController extends Controller {
     if (result.affectedRows === 1) {
       ctx.body = {
         code: 1,
-        msg: "密码修改成功，请重新登录！"
+        msg: "密码修改成功，请重新登录！",
       };
       return;
     }
@@ -188,7 +187,7 @@ class HomeController extends Controller {
     const { ctx } = this;
     ctx.session = null;
     ctx.body = {
-      code: 1
+      code: 1,
     };
   }
 
@@ -202,7 +201,7 @@ class HomeController extends Controller {
     );
     ctx.body = {
       code: 1,
-      msg: "修改昵称成功！"
+      msg: "修改昵称成功！",
     };
   }
 }

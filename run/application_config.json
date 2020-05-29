@@ -95,6 +95,7 @@
         "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-view/config/locales",
         "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-mysql/config/locales",
         "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-cors/config/locales",
+        "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-jwt/config/locales",
         "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/locales",
         "/Users/umi/git/myblog/vue-blog-api/config/locales"
       ],
@@ -175,16 +176,20 @@
       "app": true,
       "agent": false,
       "client": {
-        "host": "93.90.74.229",
+        "host": "127.0.0.1",
         "port": "3306",
         "user": "root",
-        "password": "<String len: 6>",
+        "password": "<String len: 8>",
         "database": "my_blog"
       }
     },
     "cors": {
       "origin": "*",
       "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
+    },
+    "jwt": {
+      "secret": "<String len: 6>",
+      "enable": false
     },
     "env": "local",
     "name": "vue-blog-api",
@@ -206,8 +211,10 @@
       },
       "dependencies": {
         "@alicloud/sms-sdk": "^1.0.8",
+        "bin": "0.0.0",
         "egg": "^2.15.1",
         "egg-cors": "^2.2.0",
+        "egg-jwt": "^3.1.7",
         "egg-mysql": "^3.0.0",
         "egg-oauth2-server": "^2.2.6",
         "egg-redis": "^2.3.2",
@@ -224,15 +231,15 @@
         "autod": "^3.0.1",
         "autod-egg": "^1.1.0",
         "babel-preset-env": "^1.6.1",
-        "egg-bin": "^4.13.1",
+        "egg-bin": "^4.14.1",
         "egg-ci": "^1.11.0",
         "egg-mock": "^3.21.0",
         "eslint": "^5.13.0",
         "eslint-config-egg": "^7.1.0",
-        "fis3": "^3.4.41",
-        "fis3-parser-translate-es6": "^1.0.1",
         "fis-parser-babel-6.x": "^6.24.1",
         "fis-parser-less": "^0.1.3",
+        "fis3": "^3.4.41",
+        "fis3-parser-translate-es6": "^1.0.1",
         "fis3-postpackager-loader": "^2.1.10",
         "sequelize-cli": "^5.5.0"
       },
@@ -251,7 +258,8 @@
         "ci": "npm run lint && npm run cov",
         "autod": "autod",
         "fis-dev": "fis3 release -wL -r ./app/web -d ./app",
-        "fis": "fis3 release -r ./app/web -d ./app"
+        "fis": "fis3 release -r ./app/web -d ./app",
+        "build": "pkg . --targets node8-linux-x64 --out-path /usr/dist  --debug"
       },
       "ci": {
         "version": "8"
@@ -261,7 +269,16 @@
         "url": ""
       },
       "author": "",
-      "license": "MIT"
+      "license": "MIT",
+      "pkg": {
+        "assets": [
+          "./config/*.js",
+          "./app.js",
+          "./app/**/*.js",
+          "./node_modules/nanoid/**/*.js"
+        ]
+      },
+      "bin": "build.js"
     },
     "baseDir": "/Users/umi/git/myblog/vue-blog-api",
     "HOME": "/Users/umi",
@@ -366,14 +383,16 @@
       "responseTimeout": 60000
     },
     "onClientError": null,
-    "middleware": [],
+    "middleware": [
+      "jwt"
+    ],
     "oAuth2Server": {
       "debug": true,
       "grants": [
         "password"
       ],
       "clientId": "kyj_client",
-      "clientSecret": "<String len: 6>",
+      "clientSecret": "<String len: 7>",
       "accessTokenLifetime": 7200,
       "refreshTokenLifetime": 86400
     },
@@ -561,6 +580,19 @@
       "from": "/Users/umi/git/myblog/vue-blog-api/config/plugin.js",
       "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-cors",
       "version": "2.2.3"
+    },
+    "jwt": {
+      "enable": true,
+      "package": "egg-jwt",
+      "name": "jwt",
+      "dependencies": [],
+      "optionalDependencies": [
+        "onerror"
+      ],
+      "env": [],
+      "from": "/Users/umi/git/myblog/vue-blog-api/config/plugin.js",
+      "path": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-jwt",
+      "version": "3.1.7"
     }
   }
 }

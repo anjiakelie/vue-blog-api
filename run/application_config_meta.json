@@ -161,6 +161,10 @@
     "defaultViewEngine": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-view/config/config.default.js",
     "mapping": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-view/config/config.default.js"
   },
+  "jwt": {
+    "secret": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-jwt/config/config.default.js",
+    "enable": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-jwt/config/config.default.js"
+  },
   "env": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
   "name": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
   "cookies": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
@@ -180,8 +184,10 @@
     },
     "dependencies": {
       "@alicloud/sms-sdk": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "bin": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-cors": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "egg-jwt": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-mysql": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-oauth2-server": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "egg-redis": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
@@ -203,10 +209,10 @@
       "egg-mock": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "eslint": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "eslint-config-egg": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
-      "fis3": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
-      "fis3-parser-translate-es6": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "fis-parser-babel-6.x": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "fis-parser-less": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "fis3": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "fis3-parser-translate-es6": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "fis3-postpackager-loader": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "sequelize-cli": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
     },
@@ -225,7 +231,8 @@
       "ci": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "autod": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
       "fis-dev": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
-      "fis": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
+      "fis": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+      "build": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
     },
     "ci": {
       "version": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
@@ -235,7 +242,11 @@
       "url": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
     },
     "author": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
-    "license": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
+    "license": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
+    "pkg": {
+      "assets": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
+    },
+    "bin": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js"
   },
   "baseDir": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
   "HOME": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg/config/config.default.js",
