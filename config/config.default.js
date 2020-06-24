@@ -59,6 +59,11 @@ module.exports = (appInfo) => {
     ...userConfig,
   };
 
+  // 用户头像上传
+  exports.multipart = {
+    mode: "file",
+  };
+
   config.static = {
     prefix: "/",
     dir: process.cwd() + "/public",

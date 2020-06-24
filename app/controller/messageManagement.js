@@ -5,20 +5,22 @@ const moment = require("moment");
 class manageMentController extends Controller {
   async index() {
     const { ctx, app } = this;
-    const {
+    let {
       pageSize,
       pageNum,
       name,
       content,
       account,
-      value1 //时间
+      value1, //时间
     } = ctx.request.body;
     let upageNum;
+
     if (pageNum) {
       upageNum = pageNum - 1;
     } else {
       upageNum = 0;
     }
+
     let params = {};
     let countParams = {};
     let sql = " SELECT a.postId,a.account,a.content,a.createTime,b.name ";
@@ -63,22 +65,42 @@ class manageMentController extends Controller {
 
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
-      params.pageSize = pageSize;
-      params.pageNum = upageNum * pageSize;
+      params.pageSize = parseInt(pageSize);
+      params.pageNum = parseInt(upageNum) * parseInt(pageSize);
     }
     const result = await app.mysql.query(sql, params);
-
     const count = await app.mysql.query(countSql, countParams); // 数据总数
+
+    // if (!result.length) {
+    //   // pageNum = 1;
+    //   // pageSize = 7;
+    //   console.log("typeofpageSize -->", typeof pageSize);
+    //   console.log("typeofpageNum -->", typeof pageNum);
+    //   const result = this.ctx.curl("http://127.0.0.1:7001/managementIndex", {
+    //     method: "POST",
+    //     data: {
+    //       pageSize: 7,
+    //       pageNum: 1,
+    //       name,
+    //       content,
+    //       account,
+    //       value1,
+    //     },
+    //     dataType: 'json'
+    //   });
+    //   return;
+    // }
+
     if (result) {
       ctx.body = {
         code: 1,
         result,
-        count
+        count,
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "亲！出错了哦"
+        msg: "亲！出错了哦",
       };
     }
   }
@@ -92,7 +114,7 @@ class manageMentController extends Controller {
       account,
       value1,
       content,
-      postId
+      postId,
     } = ctx.request.body;
     let upageNum;
     if (currentPage > 0) {
@@ -149,7 +171,7 @@ class manageMentController extends Controller {
       params.pageNum = upageNum * pageSize;
     }
     const result = await app.mysql.delete("message_board", {
-      postId: postId
+      postId: postId,
     });
     const deleteResult = await app.mysql.query(sql, params);
 
@@ -159,12 +181,12 @@ class manageMentController extends Controller {
         code: 1,
         count,
         deleteResult,
-        msg: "留言删除成功!"
+        msg: "留言删除成功!",
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "留言删除失败!"
+        msg: "留言删除失败!",
       };
     }
   }
