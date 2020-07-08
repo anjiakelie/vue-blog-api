@@ -18,6 +18,11 @@ exports.cors = {
   package: "egg-cors"
 };
 
+exports.jwt = {
+  enable: true,
+  package: "egg-jwt" // json with token
+};
+
 // exports.sessionRedis = {
 //   enable: true,
 //   package: "egg-session-redis"

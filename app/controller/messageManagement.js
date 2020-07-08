@@ -5,7 +5,7 @@ const moment = require("moment");
 class manageMentController extends Controller {
   async index() {
     const { ctx, app } = this;
-    const {
+    let {
       pageSize,
       pageNum,
       name,
@@ -14,11 +14,13 @@ class manageMentController extends Controller {
       value1, //时间
     } = ctx.request.body;
     let upageNum;
+
     if (pageNum) {
       upageNum = pageNum - 1;
     } else {
       upageNum = 0;
     }
+
     let params = {};
     let countParams = {};
     let sql = " SELECT a.postId,a.account,a.content,a.createTime,b.name ";
@@ -63,17 +65,32 @@ class manageMentController extends Controller {
 
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
-      params.pageSize = pageSize;
-      params.pageNum = upageNum * pageSize;
+      params.pageSize = parseInt(pageSize);
+      params.pageNum = parseInt(upageNum) * parseInt(pageSize);
     }
     const result = await app.mysql.query(sql, params);
-
-    if (!result.length) {
-      console.log("result-->", result);
-      console.log("当前页面没有数据啊");
-    }
-
     const count = await app.mysql.query(countSql, countParams); // 数据总数
+
+    // if (!result.length) {
+    //   // pageNum = 1;
+    //   // pageSize = 7;
+    //   console.log("typeofpageSize -->", typeof pageSize);
+    //   console.log("typeofpageNum -->", typeof pageNum);
+    //   const result = this.ctx.curl("http://127.0.0.1:7001/managementIndex", {
+    //     method: "POST",
+    //     data: {
+    //       pageSize: 7,
+    //       pageNum: 1,
+    //       name,
+    //       content,
+    //       account,
+    //       value1,
+    //     },
+    //     dataType: 'json'
+    //   });
+    //   return;
+    // }
+
     if (result) {
       ctx.body = {
         code: 1,
