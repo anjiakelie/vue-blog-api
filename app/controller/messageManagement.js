@@ -11,7 +11,7 @@ class manageMentController extends Controller {
       name,
       content,
       account,
-      value1 //时间
+      value1, //时间
     } = ctx.request.body;
     let upageNum;
     if (pageNum) {
@@ -68,17 +68,22 @@ class manageMentController extends Controller {
     }
     const result = await app.mysql.query(sql, params);
 
+    if (!result.length) {
+      console.log("result-->", result);
+      console.log("当前页面没有数据啊");
+    }
+
     const count = await app.mysql.query(countSql, countParams); // 数据总数
     if (result) {
       ctx.body = {
         code: 1,
         result,
-        count
+        count,
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "亲！出错了哦"
+        msg: "亲！出错了哦",
       };
     }
   }
@@ -92,7 +97,7 @@ class manageMentController extends Controller {
       account,
       value1,
       content,
-      postId
+      postId,
     } = ctx.request.body;
     let upageNum;
     if (currentPage > 0) {
@@ -149,7 +154,7 @@ class manageMentController extends Controller {
       params.pageNum = upageNum * pageSize;
     }
     const result = await app.mysql.delete("message_board", {
-      postId: postId
+      postId: postId,
     });
     const deleteResult = await app.mysql.query(sql, params);
 
@@ -159,12 +164,12 @@ class manageMentController extends Controller {
         code: 1,
         count,
         deleteResult,
-        msg: "留言删除成功!"
+        msg: "留言删除成功!",
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "留言删除失败!"
+        msg: "留言删除失败!",
       };
     }
   }
