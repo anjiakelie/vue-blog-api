@@ -43,6 +43,7 @@ module.exports = (app) => {
     "/deleteItArticle",
     controller.itArticleManagement.deleteItArticle
   ); // 删除文章
+  router.post("/editItArticle", controller.itArticleManagement.editItArticle); // 修改文章
 
   // 他会自己调用oauth的依赖的方法
   // router.all("/user/token", oAuth2Server.token(), controller.token.index); //前端调用的token接口，all是所有都会发起这个请求

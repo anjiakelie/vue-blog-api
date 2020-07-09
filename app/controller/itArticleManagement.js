@@ -25,8 +25,6 @@ class itArticleManagementController extends Controller {
     countSql += " where 1=1 ";
 
     if (value1) {
-      // let date1 = value1[0].slice(0, 10);
-      // let date2 = value1[1].slice(0, 10);
       sql += " and a.createTime between :date1 and :date2 ";
       params.date1 = value1[0] + "%";
       params.date2 = value1[1] + "%";
@@ -62,12 +60,12 @@ class itArticleManagementController extends Controller {
       ctx.body = {
         code: 1,
         result,
-        count
+        count,
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "亲！出错了哦"
+        msg: "亲！出错了哦",
       };
     }
   }
@@ -83,7 +81,7 @@ class itArticleManagementController extends Controller {
       pageNum,
       account,
       value1,
-      inItType
+      inItType,
     } = ctx.request.body;
     const itArticleId =
       moment().format("YYYYMMDDHHmmss") + ctx.helper.rndNum(18); //这是字符串的拼接
@@ -94,7 +92,7 @@ class itArticleManagementController extends Controller {
       itTitle,
       itInt,
       itType: inItType,
-      createTime: moment().format("YYYY-MM-DD HH:mm:ss")
+      createTime: moment().format("YYYY-MM-DD HH:mm:ss"),
     });
 
     let upageNum;
@@ -154,22 +152,14 @@ class itArticleManagementController extends Controller {
       ctx.body = {
         code: 1,
         resultData,
-        count
+        count,
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "亲！出错了哦"
+        msg: "亲！出错了哦",
       };
     }
-
-    // if (result.affectedRows === 1) {
-    //   ctx.body = {
-    //     code: 1,
-    //     msg: "新增文章成功!"
-    //   };
-    //   return;
-    // }
   }
   async deleteItArticle() {
     const { ctx, app } = this;
@@ -179,7 +169,7 @@ class itArticleManagementController extends Controller {
       account,
       value1,
       itType,
-      itArticleId
+      itArticleId,
     } = ctx.request.body;
     let upageNum;
     if (pageNum > 0) {
@@ -226,7 +216,7 @@ class itArticleManagementController extends Controller {
       params.pageNum = upageNum * pageSize;
     }
     const result = await app.mysql.delete("it", {
-      itArticleId: itArticleId
+      itArticleId: itArticleId,
     });
     const deleteResult = await app.mysql.query(sql, params);
     const count = await this.app.mysql.query(countSql); // 数据总数
@@ -235,13 +225,43 @@ class itArticleManagementController extends Controller {
         code: 1,
         count,
         deleteResult,
-        msg: "文章删除成功!"
+        msg: "文章删除成功!",
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "文章删除失败!"
+        msg: "文章删除失败!",
       };
+    }
+  }
+
+  async editItArticle() {
+    const { ctx, app } = this;
+    const { itDesc, itInt, itTitle, account, itArticleId } = ctx.request.body;
+    let data = {
+      itDesc,
+      itInt,
+      itTitle,
+      userId: account,
+      itArticleId,
+    };
+    const result = await this.app.mysql.update(
+      "it",
+      { itDesc, itInt, itTitle },
+      { where: { itArticleId } }
+    );
+    if (result.affectedRows === 1) {
+      ctx.body = {
+        code: 0,
+        msg: "修改成功!",
+      };
+      return;
+    } else {
+      ctx.body = {
+        code: -1,
+        msg: "修改失败!",
+      };
+      return;
     }
   }
 }
