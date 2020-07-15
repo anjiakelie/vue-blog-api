@@ -193,17 +193,37 @@ class HomeController extends Controller {
 
   async changeusername() {
     const { ctx, app } = this;
+    // const file = ctx.request.files[0];
+    // console.log("file-->", file);
     const { account, userName } = ctx.request.body;
-    const result = await app.mysql.update(
-      "user",
-      { name: userName },
-      { where: { account } }
-    );
+
+    if (userName) {
+      const result = await app.mysql.update(
+        "user",
+        { name: userName },
+        { where: { account } }
+      );
+    } else {
+      ctx.body = {
+        code: -1,
+        msg: "昵称不能为空!",
+      };
+      return;
+    }
+
     ctx.body = {
       code: 1,
       msg: "修改昵称成功！",
     };
   }
+
+  // async addUserImage() {
+  //   const { ctx, app } = this;
+  //   ctx.body = {
+  //     code: 0,
+  //     msg: "用户头像上传成功!",
+  //   };
+  // }
 }
 
 module.exports = HomeController;
