@@ -9,6 +9,8 @@ module.exports = (app) => {
   // 前端获取token
   // router.all("/login", oAuth2Server.token(), controller.login.index);
 
+  // router.post("/addUserImage", controller.home.addUserImage); //上传用户头像
+
   router.post("/login", controller.home.login); //登录
   router.post("/forgetpsw", controller.home.forgetpsw); //忘记密码
   router.post("/register", controller.home.register); //注册
@@ -43,6 +45,7 @@ module.exports = (app) => {
     "/deleteItArticle",
     controller.itArticleManagement.deleteItArticle
   ); // 删除文章
+  router.post("/editItArticle", controller.itArticleManagement.editItArticle); // 修改文章
 
   // 他会自己调用oauth的依赖的方法
   // router.all("/user/token", oAuth2Server.token(), controller.token.index); //前端调用的token接口，all是所有都会发起这个请求
