@@ -5,6 +5,18 @@
       "POST"
     ],
     "paramNames": [],
+    "path": "/addUserImage",
+    "regexp": "/^\\/addUserImage(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
     "path": "/login",
     "regexp": "/^\\/login(?:\\/(?=$))?$/",
     "stack": [

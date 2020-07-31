@@ -9,7 +9,7 @@ module.exports = (app) => {
   // 前端获取token
   // router.all("/login", oAuth2Server.token(), controller.login.index);
 
-  // router.post("/addUserImage", controller.home.addUserImage); //上传用户头像
+  router.post("/addUserImage", controller.home.addUserImage); //上传用户头像
 
   router.post("/login", controller.home.login); //登录
   router.post("/forgetpsw", controller.home.forgetpsw); //忘记密码

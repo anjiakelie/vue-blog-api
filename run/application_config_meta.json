@@ -44,6 +44,22 @@
       "checkAddress": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-security/config/config.default.js"
     }
   },
+  "multipart": {
+    "mode": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
+    "autoFields": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
   "cors": {
     "origin": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js",
     "allowMethods": "/Users/umi/git/myblog/vue-blog-api/config/config.default.js"
@@ -113,22 +129,6 @@
   },
   "schedule": {
     "directory": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-schedule/config/config.default.js"
-  },
-  "multipart": {
-    "mode": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "autoFields": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "defaultCharset": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "fieldNameSize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "fieldSize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "fields": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "fileSize": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "files": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "fileExtensions": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "whitelist": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "tmpdir": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js",
-    "cleanSchedule": {
-      "cron": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-multipart/config/config.default.js"
-    }
   },
   "development": {
     "watchDirs": "/Users/umi/git/myblog/vue-blog-api/node_modules/egg-development/config/config.default.js",

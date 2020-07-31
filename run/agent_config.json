@@ -91,7 +91,7 @@
       "directory": []
     },
     "multipart": {
-      "mode": "stream",
+      "mode": "file",
       "autoFields": false,
       "defaultCharset": "utf8",
       "fieldNameSize": 100,

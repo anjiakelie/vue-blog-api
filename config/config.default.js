@@ -22,6 +22,12 @@ module.exports = (appInfo) => {
     csrf: false,
   };
 
+
+  // 用户头像上传
+  exports.multipart = {
+    mode: "file",
+  };
+
   exports.cors = {
     //解决跨域问题
     origin: "*",
@@ -57,11 +63,6 @@ module.exports = (appInfo) => {
   return {
     ...config,
     ...userConfig,
-  };
-
-  // 用户头像上传
-  exports.multipart = {
-    mode: "file",
   };
 
   config.static = {

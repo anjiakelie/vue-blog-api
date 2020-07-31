@@ -1,6 +1,11 @@
 "use strict";
 const Controller = require("egg").Controller;
 const moment = require("moment");
+const fs = require("mz/fs");
+
+// const path = require("path");
+// const awaitWriteStream = require("await-stream-ready").write;
+// const sendToWormhole = require("stream-wormhole");
 
 class HomeController extends Controller {
   async authenticate() {
@@ -37,12 +42,14 @@ class HomeController extends Controller {
       };
       return;
     }
-    const { Id, name, state, code } = user;
+    const { Id, name, state, code, imageUrl } = user;
     data.Id = Id;
     data.account = account;
     data.name = name;
     data.state = state;
     data.code = code;
+    data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8");
+
     ctx.body = {
       code: 1,
       data: data,
@@ -193,23 +200,13 @@ class HomeController extends Controller {
 
   async changeusername() {
     const { ctx, app } = this;
-    // const file = ctx.request.files[0];
-    // console.log("file-->", file);
     const { account, userName } = ctx.request.body;
 
-    if (userName) {
-      const result = await app.mysql.update(
-        "user",
-        { name: userName },
-        { where: { account } }
-      );
-    } else {
-      ctx.body = {
-        code: -1,
-        msg: "昵称不能为空!",
-      };
-      return;
-    }
+    const result = await app.mysql.update(
+      "user",
+      { name: userName },
+      { where: { account } }
+    );
 
     ctx.body = {
       code: 1,
@@ -217,13 +214,29 @@ class HomeController extends Controller {
     };
   }
 
-  // async addUserImage() {
-  //   const { ctx, app } = this;
-  //   ctx.body = {
-  //     code: 0,
-  //     msg: "用户头像上传成功!",
-  //   };
-  // }
+  async addUserImage() {
+    const { ctx, app } = this;
+    const { userId } = ctx.request.body;
+    const file = ctx.request.files[0];
+    // const path = `app/public/userImage/${Date.now()}.png`;
+    let fileBufferString = fs.readFileSync(file.filepath).toString("base64");
+    // let fileBufferString = fs.readFileSync(file[0].url).toString("base64");
+    // const dataBuffer = new Buffer(fileBufferString, "base64"); //把base64码转成buffer对象，
+    const result = await this.app.mysql.update(
+      "user",
+      { imageUrl: fileBufferString },
+      { where: { id: userId } }
+    );
+    // 这里的路径写入,通常用在路径返回
+    // fs.writeFile(path, dataBuffer, function (err) {
+    //   err ? console.log(err) : console.log("写入成功！");
+    // });
+    ctx.body = {
+      code: 0,
+      msg: "用户头像上传成功!",
+      imageUrl: fileBufferString,
+    };
+  }
 }
 
 module.exports = HomeController;
