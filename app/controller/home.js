@@ -202,6 +202,14 @@ class HomeController extends Controller {
     const { ctx, app } = this;
     const { account, userName } = ctx.request.body;
 
+
+
+    const result = await app.mysql.update(
+      "user",
+      { name: userName },
+      { where: { account } }
+    );
+
     const user = await app.mysql.get("user", {
       account,
     });
@@ -213,12 +221,6 @@ class HomeController extends Controller {
     data.state = state;
     data.code = code;
     data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8");
-
-    const result = await app.mysql.update(
-      "user",
-      { name: userName },
-      { where: { account } }
-    );
 
     ctx.body = {
       code: 1,
