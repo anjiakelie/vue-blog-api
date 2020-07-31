@@ -202,6 +202,18 @@ class HomeController extends Controller {
     const { ctx, app } = this;
     const { account, userName } = ctx.request.body;
 
+    const user = await app.mysql.get("user", {
+      account,
+    });
+    let data = {};
+    const { Id, name, state, code, imageUrl } = user;
+    data.Id = Id;
+    data.account = account;
+    data.name = name;
+    data.state = state;
+    data.code = code;
+    data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8");
+
     const result = await app.mysql.update(
       "user",
       { name: userName },
@@ -211,6 +223,7 @@ class HomeController extends Controller {
     ctx.body = {
       code: 1,
       msg: "修改昵称成功！",
+      data,
     };
   }
 
