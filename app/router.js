@@ -32,6 +32,8 @@ module.exports = (app) => {
     "/codeManagementChangeUserCode",
     controller.codeManagement.changeUserCode
   ); // 修改用户权限
+  router.post("/stopUse", controller.codeManagement.stopUse); // 冻结用户
+  router.post("/openUse", controller.codeManagement.openUse); // 激活用户
 
   //////////////////// it页面
   router.post(`/it/:id`, controller.it.index); // it页面index

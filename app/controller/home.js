@@ -48,7 +48,7 @@ class HomeController extends Controller {
     data.name = name;
     data.state = state;
     data.code = code;
-    data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8");//数据库拿出来要转utf8
+    data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8"); //数据库拿出来要转utf8
     ctx.body = {
       code: 1,
       data: data,
@@ -187,6 +187,7 @@ class HomeController extends Controller {
       return;
     }
   }
+
   async loginout() {
     const { ctx } = this;
     ctx.session = null;
