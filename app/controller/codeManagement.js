@@ -214,7 +214,7 @@ class codeManagementController extends Controller {
 
     const result = await this.app.mysql.update(
       "user",
-      { state: "-1" },
+      { state: "10" },
       { where: { Id: id } }
     );
     if (result.affectedRows === 1) {
@@ -231,7 +231,7 @@ class codeManagementController extends Controller {
     const { id } = ctx.request.body;
     const result = await this.app.mysql.update(
       "user",
-      { state: "10" },
+      { state: "-1" },
       { where: { Id: id } }
     );
     if (result.affectedRows === 1) {
