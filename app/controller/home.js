@@ -48,8 +48,7 @@ class HomeController extends Controller {
     data.name = name;
     data.state = state;
     data.code = code;
-    data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8");
-
+    data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8");//数据库拿出来要转utf8
     ctx.body = {
       code: 1,
       data: data,
@@ -150,11 +149,9 @@ class HomeController extends Controller {
 
   async changepsw() {
     const { ctx, app } = this;
-
     const { account, newpass, pass } = ctx.request.body;
     const userPassWord = ctx.helper.md5(newpass);
     const oldPassWord = ctx.helper.md5(pass);
-
     const user = await app.mysql.get("user", { account });
     if (!user) {
       ctx.body = {
@@ -201,15 +198,11 @@ class HomeController extends Controller {
   async changeusername() {
     const { ctx, app } = this;
     const { account, userName } = ctx.request.body;
-
-
-
     const result = await app.mysql.update(
       "user",
       { name: userName },
       { where: { account } }
     );
-
     const user = await app.mysql.get("user", {
       account,
     });
@@ -221,10 +214,9 @@ class HomeController extends Controller {
     data.state = state;
     data.code = code;
     data.imageUrl = Buffer.from(imageUrl, "base64").toString("utf-8");
-
     ctx.body = {
       code: 1,
-      msg: "修改昵称成功！",
+      msg: "修改成功！",
       data,
     };
   }
@@ -233,9 +225,9 @@ class HomeController extends Controller {
     const { ctx, app } = this;
     const { userId } = ctx.request.body;
     const file = ctx.request.files[0];
-    // const path = `app/public/userImage/${Date.now()}.png`;
+    // const path = `app/public/userImage/${Date.now()}.png`; // 声明一个路径
     let fileBufferString = fs.readFileSync(file.filepath).toString("base64");
-    // let fileBufferString = fs.readFileSync(file[0].url).toString("base64");
+    // let fileBufferString = fs.readFileSync(file[0].url).toString("base64"); // 同步转base64,用在存放图片到本地
     // const dataBuffer = new Buffer(fileBufferString, "base64"); //把base64码转成buffer对象，
     const result = await this.app.mysql.update(
       "user",
@@ -249,7 +241,6 @@ class HomeController extends Controller {
     ctx.body = {
       code: 0,
       msg: "用户头像上传成功!",
-      imageUrl: fileBufferString,
     };
   }
 }
