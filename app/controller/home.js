@@ -228,7 +228,9 @@ class HomeController extends Controller {
 
   async addUserImage() {
     const { ctx, app } = this;
+    // const { userId, imageUrl } = ctx.request.body;
     const { userId } = ctx.request.body;
+    // console.log("imageUrl-->", imageUrl);
     const file = ctx.request.files[0];
     // const path = `app/public/userImage/${Date.now()}.png`; // 声明一个路径
     let fileBufferString = fs.readFileSync(file.filepath).toString("base64");
