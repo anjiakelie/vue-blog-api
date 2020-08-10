@@ -161,6 +161,30 @@
     "methods": [
       "POST"
     ],
+    "paramNames": [],
+    "path": "/stopUse",
+    "regexp": "/^\\/stopUse(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/openUse",
+    "regexp": "/^\\/openUse(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
     "paramNames": [
       {
         "name": "id",

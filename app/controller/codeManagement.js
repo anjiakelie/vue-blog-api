@@ -10,7 +10,7 @@ class codeManagementController extends Controller {
       pageNum,
       name,
       account,
-      value1 //时间
+      value1, //时间
     } = ctx.request.body;
     let upageNum;
     if (pageNum > 0) {
@@ -60,7 +60,7 @@ class codeManagementController extends Controller {
     const result = await app.mysql.query(sql, params);
     const count = await app.mysql.query(countSql, countParams); // 数据总数
     if (result) {
-      result.forEach(item => {
+      result.forEach((item) => {
         let createTime = item.createTime.slice(0, 10);
         item.createTime = createTime;
         switch (item.code) {
@@ -78,12 +78,12 @@ class codeManagementController extends Controller {
       ctx.body = {
         code: 1,
         result,
-        count
+        count,
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "亲！出错了哦"
+        msg: "亲！出错了哦",
       };
     }
   }
@@ -91,23 +91,23 @@ class codeManagementController extends Controller {
     const { ctx, app } = this;
     const { codeId, userId } = ctx.request.body;
     const row = {
-      code: codeId
+      code: codeId,
     };
     const options = {
       where: {
-        Id: userId
-      }
+        Id: userId,
+      },
     };
     const result = await this.app.mysql.update("user", row, options);
     if (result) {
       ctx.body = {
         code: 1,
-        msg: "亲！修改成功哦！"
+        msg: "亲！修改成功哦！",
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "修改失败！"
+        msg: "修改失败！",
       };
     }
   }
@@ -119,7 +119,7 @@ class codeManagementController extends Controller {
       name,
       account,
       UserId,
-      value1 //时间
+      value1, //时间
     } = ctx.request.body;
     let upageNum;
     if (pageNum > 0) {
@@ -159,29 +159,25 @@ class codeManagementController extends Controller {
       countSql += " and account like :account ";
       countParams.account = "%" + account + "%";
     }
-
     const result = await this.app.mysql.delete("user", {
-      Id: UserId
+      Id: UserId,
     });
     const resultM = await this.app.mysql.delete("message_board", {
-      id: UserId
+      id: UserId,
     });
     const resultIt = await this.app.mysql.delete("it", {
-      userId: UserId
+      userId: UserId,
     });
     sql += " order by createTime asc ";
-
     if (pageSize) {
       sql += " limit :pageNum,:pageSize ";
       params.pageSize = pageSize;
       params.pageNum = upageNum * pageSize;
     }
-
     const deleteResult = await app.mysql.query(sql, params); //返回删除之后当前的tableData
     const count = await app.mysql.query(countSql, countParams); // 数据总数
-
     if (deleteResult) {
-      deleteResult.forEach(item => {
+      deleteResult.forEach((item) => {
         let createTime = item.createTime.slice(0, 10);
         item.createTime = createTime;
         switch (item.code) {
@@ -203,13 +199,47 @@ class codeManagementController extends Controller {
         code: 1,
         msg: "删除该用户成功！",
         count,
-        deleteResult
+        deleteResult,
       };
     } else {
       ctx.body = {
         code: -1,
-        msg: "删除失败！"
+        msg: "删除失败！",
       };
+    }
+  }
+  async stopUse() {
+    const { ctx, app } = this;
+    const { id } = ctx.request.body;
+
+    const result = await this.app.mysql.update(
+      "user",
+      { state: "10" },
+      { where: { Id: id } }
+    );
+    if (result.affectedRows === 1) {
+      ctx.body = {
+        code: 1,
+        msg: "修改完成!",
+      };
+      return;
+    }
+  }
+
+  async openUse() {
+    const { ctx, app } = this;
+    const { id } = ctx.request.body;
+    const result = await this.app.mysql.update(
+      "user",
+      { state: "-1" },
+      { where: { Id: id } }
+    );
+    if (result.affectedRows === 1) {
+      ctx.body = {
+        code: 1,
+        msg: "修改完成!",
+      };
+      return;
     }
   }
 }
