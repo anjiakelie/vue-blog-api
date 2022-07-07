@@ -21,7 +21,7 @@
     "egg-validate": "^1.0.0",
     "egg-view-ejs": "^2.0.0",
     "egg-wechat-api": "^1.2.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "mysql2": "^1.6.5"
   },
   "devDependencies": {
